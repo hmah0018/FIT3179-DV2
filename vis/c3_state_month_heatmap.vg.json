@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Monthly food inflation across Malaysian states from 2022 to 2026.",
+
+  "width": "container",
+  "height": 300,
+
+  "data": {
+    "url": "data/c3_m1_food_inflation_state.csv"
+  },
+
+  "mark": {
+    "type": "rect",
+    "stroke": "#ffffff",
+    "strokeWidth": 0.35
+  },
+
+  "encoding": {
+
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "timeUnit": "yearmonth",
+
+      "axis": {
+        "title": null,
+        "format": "%Y",
+        "tickCount": 5,
+        "labelAngle": 0,
+        "labelFontSize": 10,
+        "labelColor": "#526071",
+        "domain": false,
+        "ticks": false,
+        "grid": false
+      }
+    },
+
+    "y": {
+      "field": "state",
+      "type": "nominal",
+
+      "sort": [
+        "Johor",
+        "Kedah",
+        "Kelantan",
+        "Melaka",
+        "Negeri Sembilan",
+        "Pahang",
+        "Perak",
+        "Perlis",
+        "Pulau Pinang",
+        "Sabah",
+        "Sarawak",
+        "Selangor",
+        "Terengganu",
+        "W.P. Kuala Lumpur",
+        "W.P. Labuan",
+        "W.P. Putrajaya"
+      ],
+
+      "axis": {
+        "title": null,
+        "labelFontSize": 9,
+        "labelColor": "#435166",
+        "labelLimit": 105,
+        "ticks": false,
+        "domain": false
+      }
+    },
+
+    "color": {
+      "field": "yoy",
+      "type": "quantitative",
+
+      "title": "Food inflation (%)",
+
+      "scale": {
+        "domainMid": 0,
+        "range": [
+          "#315b89",
+          "#f4f1e8",
+          "#d97732"
+        ]
+      },
+
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 180,
+        "gradientThickness": 10,
+        "titleFontSize": 10,
+        "labelFontSize": 9,
+        "titleColor": "#435166",
+        "labelColor": "#526071"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "state",
+        "type": "nominal",
+        "title": "State"
+      },
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Month",
+        "format": "%B %Y"
+      },
+      {
+        "field": "yoy",
+        "type": "quantitative",
+        "title": "Food inflation (%)",
+        "format": ".2f"
+      },
+      {
+        "field": "index",
+        "type": "quantitative",
+        "title": "Food CPI index",
+        "format": ".1f"
+      }
+    ]
+  },
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

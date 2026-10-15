@@ -1,0 +1,17 @@
+state,basket_rm,income_median,income_mean,expenditure_mean,share_of_income,status,code,col,row
+Johor,179.15,7712,9484,5927,2.32,ok,JHR,1,5
+Kedah,173.37,4895,5793,4028,3.54,ok,KDH,1,1
+Kelantan,177.86,4083,5265,3825,4.36,ok,KTN,2,1
+Melaka,181.2,6891,8686,6212,2.63,ok,MLK,0,5
+Negeri Sembilan,179.3,5591,7305,5115,3.21,ok,NSN,0,4
+Pahang,180.12,4975,6066,4368,3.62,ok,PHG,2,3
+Perak,173.18,4687,6173,4232,3.69,ok,PRK,1,2
+Perlis,176.24,4950,5996,4084,3.56,ok,PLS,1,0
+Pulau Pinang,179.22,7386,9152,5850,2.43,ok,PNG,0,2
+Sabah,190.86,4890,6498,3547,3.9,ok,SBH,5,1
+Sarawak,186.76,5504,6947,4281,3.39,ok,SWK,4,2
+Selangor,177.24,10726,13296,7266,1.65,ok,SGR,0,3
+Terengganu,180.38,6627,7627,5219,2.72,ok,TRG,2,2
+W.P. Kuala Lumpur,182.99,10802,13985,8178,1.69,ok,KUL,1,3
+W.P. Labuan,,7383,8555,4497,,too few shops,LBN,4,1
+W.P. Putrajaya,184.02,10769,13846,9186,1.71,ok,PJY,1,4

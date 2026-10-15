@@ -1,0 +1,460 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "data": {
+    "url": "data/c4_item_year.csv"
+  },
+
+  "vconcat": [
+    {
+      "width": 550,
+      "height": 390,
+
+      "transform": [
+        {
+          "filter": "datum.year == 2026"
+        },
+        {
+          "calculate": "datum.change_vs_2022 >= 0 ? 'Increase' : 'Decrease'",
+          "as": "direction"
+        }
+      ],
+
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "stroke": "#9aa5b1",
+            "strokeWidth": 1.2,
+            "strokeDash": [4, 4]
+          },
+
+          "encoding": {
+            "x": {
+              "datum": 0,
+              "scale": {
+                "domain": [-35, 55],
+                "nice": false
+              }
+            }
+          }
+        },
+
+        {
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 2.5
+          },
+
+          "encoding": {
+            "y": {
+              "field": "item",
+              "type": "nominal",
+
+              "sort": {
+                "field": "change_vs_2022",
+                "order": "descending"
+              },
+
+              "axis": {
+                "title": null,
+                "labelLimit": 190,
+                "labelFontSize": 10,
+                "labelColor": "#435166"
+              }
+            },
+
+            "x": {
+              "field": "change_vs_2022",
+              "type": "quantitative",
+
+              "scale": {
+                "domain": [-35, 55],
+                "nice": false
+              },
+
+              "axis": {
+                "title": "Observed price change, 2022–2026 (%)",
+                "grid": true,
+                "gridColor": "#e8e5df",
+                "tickCount": 8,
+                "labelExpr": "datum.value + '%'",
+                "labelColor": "#435166",
+                "titleColor": "#183153"
+              }
+            },
+
+            "x2": {
+              "datum": 0
+            },
+
+            "color": {
+              "field": "direction",
+              "type": "nominal",
+
+              "scale": {
+                "domain": [
+                  "Increase",
+                  "Decrease"
+                ],
+                "range": [
+                  "#d97732",
+                  "#6686b5"
+                ]
+              },
+
+              "legend": null
+              
+            }
+          }
+        },
+
+        {
+          "params": [
+            {
+              "name": "selectedItem",
+
+              "value": [
+                {
+                  "item": "Tomato (1kg)"
+                }
+              ],
+
+              "select": {
+                "type": "point",
+                "fields": [
+                  "item"
+                ],
+                "on": "click",
+                "clear": false,
+                "toggle": false
+              }
+            }
+          ],
+
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "cursor": "pointer",
+            "clip": false
+          },
+
+          "encoding": {
+            "y": {
+              "field": "item",
+              "type": "nominal",
+
+              "sort": {
+                "field": "change_vs_2022",
+                "order": "descending"
+              }
+            },
+
+            "x": {
+              "field": "change_vs_2022",
+              "type": "quantitative",
+
+              "scale": {
+                "domain": [-35, 55],
+                "nice": false
+              }
+            },
+
+            "color": {
+              "field": "direction",
+              "type": "nominal",
+
+              "scale": {
+                "domain": [
+                  "Increase",
+                  "Decrease"
+                ],
+                "range": [
+                  "#d97732",
+                  "#6686b5"
+                ]
+              },
+
+              "legend": null
+            },
+
+            "size": {
+              "condition": {
+                "param": "selectedItem",
+                "empty": false,
+                "value": 135
+              },
+
+              "value": 80
+            },
+
+            "opacity": {
+              "condition": {
+                "param": "selectedItem",
+                "empty": false,
+                "value": 1
+              },
+
+              "value": 0.62
+            },
+
+            "stroke": {
+              "condition": {
+                "param": "selectedItem",
+                "empty": false,
+                "value": "#183153"
+              },
+
+              "value": "#ffffff"
+            },
+
+            "strokeWidth": {
+              "condition": {
+                "param": "selectedItem",
+                "empty": false,
+                "value": 2.5
+              },
+
+              "value": 1
+            },
+
+            "tooltip": [
+              {
+                "field": "item",
+                "type": "nominal",
+                "title": "Grocery item"
+              },
+
+              {
+                "field": "item_group",
+                "type": "nominal",
+                "title": "Food group"
+              },
+
+              {
+                "field": "median_rm",
+                "type": "quantitative",
+                "title": "Aug 2026 median price (RM)",
+                "format": ".2f"
+              },
+
+              {
+                "field": "change_vs_2022",
+                "type": "quantitative",
+                "title": "Change from Aug 2022 (%)",
+                "format": "+.1f"
+              },
+
+              {
+                "field": "matched_shops",
+                "type": "quantitative",
+                "title": "Matched shops",
+                "format": ","
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "width": 550,
+      "height": 150,
+
+      "title": {
+        "text": "Selected grocery item over time",
+        "anchor": "start",
+        "color": "#183153",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "offset": 10
+      },
+
+      "transform": [
+        {
+          "filter": {
+            "param": "selectedItem",
+            "empty": false
+          }
+        },
+
+        {
+          "window": [
+            {
+              "op": "last_value",
+              "field": "change_vs_2022",
+              "as": "final_change"
+            }
+          ],
+
+          "sort": [
+            {
+              "field": "year",
+              "order": "ascending"
+            }
+          ],
+
+          "frame": [
+            null,
+            null
+          ]
+        }
+      ],
+
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "strokeWidth": 2.5,
+            "clip": false
+          },
+
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal",
+
+              "scale": {
+                "padding": 0.8
+              },
+
+              "axis": {
+                "title": "August snapshot",
+                "labelAngle": 0,
+                "labelColor": "#435166",
+                "labelFlush": false,
+                "labelOverlap": false
+              }
+            },
+
+            "y": {
+              "field": "median_rm",
+              "type": "quantitative",
+
+              "scale": {
+                "zero": false,
+                "padding": 10
+              },
+
+              "axis": {
+                "title": "Median observed price (RM)",
+                "grid": true,
+                "gridColor": "#ece9e3",
+                "labelColor": "#435166",
+                "titleColor": "#183153"
+              }
+            },
+
+            "color": {
+              "condition": {
+                "test": "datum.final_change >= 0",
+                "value": "#d97732"
+              },
+
+              "value": "#6686b5"
+            }
+          }
+        },
+
+        {
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 75,
+            "stroke": "#ffffff",
+            "strokeWidth": 1.2,
+            "clip": false
+          },
+
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "ordinal",
+
+              "scale": {
+                "padding": 0.8
+              }
+            },
+
+            "y": {
+              "field": "median_rm",
+              "type": "quantitative",
+
+              "scale": {
+                "zero": false,
+                "padding": 10
+              }
+            },
+
+            "color": {
+              "condition": {
+                "test": "datum.final_change >= 0",
+                "value": "#d97732"
+              },
+
+              "value": "#6686b5"
+            },
+
+            "tooltip": [
+              {
+                "field": "item",
+                "type": "nominal",
+                "title": "Grocery item"
+              },
+
+              {
+                "field": "year",
+                "type": "ordinal",
+                "title": "Year"
+              },
+
+              {
+                "field": "median_rm",
+                "type": "quantitative",
+                "title": "Median observed price (RM)",
+                "format": ".2f"
+              },
+
+              {
+                "field": "change_vs_2022",
+                "type": "quantitative",
+                "title": "Change from 2022 (%)",
+                "format": "+.1f"
+              },
+
+              {
+                "field": "matched_shops",
+                "type": "quantitative",
+                "title": "Matched shops",
+                "format": ","
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+
+  "spacing": 25,
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "domainColor": "#8491a0",
+      "domainWidth": 1,
+      "tickColor": "#8491a0",
+      "labelColor": "#435166",
+      "titleColor": "#183153",
+      "titleFontWeight": "bold"
+    },
+
+    "title": {
+      "font": "Arial"
+    }
+  }
+}

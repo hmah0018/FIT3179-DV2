@@ -1,0 +1,265 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Food inflation by Malaysian state in August 2026.",
+
+  "width": "container",
+  "height": 300,
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "layer": [
+
+    {
+      "data": {
+        "url": "data/m1_state_inflation.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "transform": [
+        {
+          "calculate": "datum.properties.state_name",
+          "as": "state_name"
+        },
+        {
+          "calculate": "datum.properties.yoy",
+          "as": "food_inflation"
+        },
+        {
+          "calculate": "datum.properties.index",
+          "as": "food_index"
+        },
+        {
+          "calculate": "datum.properties.date",
+          "as": "month"
+        }
+      ],
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#d8d3c8",
+        "strokeWidth": 1.1
+      },
+
+      "encoding": {
+
+        "color": {
+          "field": "food_inflation",
+          "type": "quantitative",
+
+          "title": "Food inflation (%)",
+
+          "scale": {
+            "domainMid": 0,
+            "range": [
+              "#315b89",
+              "#f4f1e8",
+              "#d97732"
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "gradientLength": 200,
+            "gradientThickness": 11,
+
+            "titleFontSize": 10,
+            "labelFontSize": 9,
+
+            "titleColor": "#435166",
+            "labelColor": "#526071"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "state_name",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "month",
+            "type": "nominal",
+            "title": "Month"
+          },
+          {
+            "field": "food_inflation",
+            "type": "quantitative",
+            "title": "Food inflation (%)",
+            "format": ".2f"
+          },
+          {
+            "field": "food_index",
+            "type": "quantitative",
+            "title": "Food CPI index",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 103.55,
+            "lat": 1.85,
+            "label": "Johor 3.51%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 45,
+        "color": "#d97732",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 103.55,
+            "lat": 1.85,
+            "label": "Highest · Johor 3.51%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "dy": 20,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#d97732"
+        },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 102.25,
+            "lat": 5.30,
+            "label": "Kelantan -0.07%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 45,
+        "color": "#315b89",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 102.25,
+            "lat": 5.30,
+            "label": "Lowest · Kelantan -0.07%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "dx": 12,
+        "dy": -12,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#315b89"
+        },
+
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+
+  ],
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

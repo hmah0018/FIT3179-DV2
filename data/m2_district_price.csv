@@ -1,0 +1,161 @@
+state,district,lon,lat,price_index,n_items,n_shops,status
+Selangor,Kuala Selangor,101.3111,3.3758,98.7,20,16,ok
+Kedah,Baling,100.9342,5.7231,96.3,20,8,ok
+Johor,Johor Bahru,103.8032,1.4831,100.0,20,65,ok
+Johor,Kluang,103.3791,2.0717,100.0,20,23,ok
+Johor,Kota Tinggi,103.966,1.6827,106.1,20,22,ok
+Johor,Tangkak,102.6444,2.2638,98.2,20,8,ok
+Johor,Segamat,102.9652,2.5004,95.3,20,21,ok
+Johor,Mersing,103.7654,2.3551,98.7,19,22,ok
+Johor,Pontian,103.4755,1.513,100.0,19,17,ok
+Johor,Muar,102.7821,2.1335,97.1,19,22,ok
+Johor,Kulai,103.5494,1.6853,,0,0,no data
+Melaka,Jasin,102.4188,2.2898,100.1,19,12,ok
+Melaka,Melaka Tengah,102.2288,2.2465,96.7,20,25,ok
+Melaka,Alor Gajah,102.1604,2.3828,100.3,20,16,ok
+Sarawak,Lundu,109.7764,1.7495,,17,3,too few shops
+Sarawak,Bau,110.1061,1.3835,100.0,19,7,ok
+W.P. Labuan,W.P. Labuan,115.2191,5.312,100.0,17,15,ok
+W.P. Putrajaya,W.P. Putrajaya,101.6989,2.9299,101.1,20,20,ok
+Sarawak,Kuching,110.2979,1.4289,100.0,19,40,ok
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,101.6809,3.1432,101.3,20,183,ok
+Sarawak,Samarahan,110.4684,1.4343,99.1,18,5,ok
+Sarawak,Serian,110.6182,1.1136,100.0,19,7,ok
+Johor,Batu Pahat,102.9925,1.912,99.6,20,15,ok
+Sarawak,Lubok Antu,111.8661,1.2881,,12,2,too few shops
+Sarawak,Simunjan,110.8567,1.2756,,12,3,too few shops
+Sarawak,Sri Aman,111.2861,1.214,100.0,17,11,ok
+Sarawak,Sarikei,111.4275,2.0689,100.0,18,10,ok
+Sarawak,Dalat,111.9608,2.7012,,14,2,too few shops
+Sarawak,Betong,111.4747,1.48,,16,2,too few shops
+Sarawak,Daro,111.4,2.594,,0,0,no data
+Sarawak,Saratok,111.4081,1.7671,,0,0,no data
+Sarawak,Maradong,111.6763,2.1674,,15,4,too few shops
+Sarawak,Julau,111.8987,1.82,,9,2,too few shops
+Sarawak,Mukah,112.2924,2.8118,100.0,19,8,ok
+Sarawak,Sibu,111.8766,2.2922,100.0,19,20,ok
+Sarawak,Kapit,113.0856,2.1756,106.2,15,10,ok
+Sarawak,Bintulu,113.2561,3.3121,100.0,19,12,ok
+Sarawak,Kanowit,112.2099,1.9345,,16,2,too few shops
+Sarawak,Tanjung Manis,111.318,2.2837,,12,2,too few shops
+Sarawak,Sebauh,113.5495,3.1495,,12,4,too few shops
+Sarawak,Song,112.6479,1.8143,108.1,14,5,ok
+Sarawak,Asajaya,110.6122,1.5317,,0,0,no data
+Sarawak,Pakan,111.6624,1.783,,12,2,too few shops
+Sarawak,Lawas,115.4184,4.4544,105.7,15,12,ok
+Sarawak,Tatau,113.1538,2.6278,,16,4,too few shops
+Sarawak,Selangau,112.3523,2.4944,,15,3,too few shops
+Sarawak,Matu,111.6943,2.6407,,0,0,no data
+Sarawak,Marudi,114.3599,4.1737,,11,3,too few shops
+Sarawak,Tebedu,110.391,1.0365,,0,0,no data
+Sarawak,Kabong,111.2581,1.8773,,0,0,no data
+Sarawak,Limbang,115.0597,4.3478,118.8,16,15,ok
+Sarawak,Pusa,111.1203,1.5499,,0,0,no data
+Sarawak,Miri,115.3646,3.5305,101.8,18,19,ok
+Sarawak,Belaga,114.3813,2.6618,,7,3,too few shops
+Sarawak,Telang Usan,114.8271,3.3148,,0,0,no data
+Pulau Pinang,Seberang Perai Tengah,100.4544,5.3608,96.8,20,34,ok
+Sarawak,Subis,113.7227,3.7667,120.3,15,8,ok
+Sarawak,Beluru,114.1282,3.5523,,0,0,no data
+Perlis,Perlis,100.2637,6.4956,99.0,20,37,ok
+Pulau Pinang,Seberang Perai Selatan,100.486,5.2125,97.4,20,15,ok
+Sarawak,Bukit Mabong,113.8435,1.7651,,0,0,no data
+Pahang,Bentong,101.94,3.4186,97.9,20,11,ok
+Pahang,Jerantut,102.5898,4.2569,99.5,20,23,ok
+Pulau Pinang,Seberang Perai Utara,100.453,5.4888,97.7,20,38,ok
+Pulau Pinang,Timur Laut,100.2891,5.4074,102.6,20,38,ok
+Pahang,Cameron Highlands,101.4728,4.4675,,0,0,no data
+Pahang,Kuantan,103.0228,3.897,100.6,20,43,ok
+Negeri Sembilan,Kuala Pilah,102.2189,2.7221,103.4,20,12,ok
+Negeri Sembilan,Seremban,101.9041,2.7562,100.0,20,25,ok
+Negeri Sembilan,Jelebu,102.147,3.0591,,18,3,too few shops
+Negeri Sembilan,Tampin,102.4675,2.5476,,18,2,too few shops
+Pahang,Maran,102.7023,3.6007,98.6,20,8,ok
+Pulau Pinang,Barat Daya,100.2228,5.3707,101.6,20,21,ok
+Negeri Sembilan,Rembau,102.0989,2.5626,,19,4,too few shops
+Perak,Hulu Perak,101.3053,5.4528,93.4,20,17,ok
+Perak,Batang Padang,101.3324,4.121,98.8,19,12,ok
+Perak,Bagan Datuk,100.9322,3.876,,19,3,too few shops
+Negeri Sembilan,Jempol,102.4891,2.8685,97.7,19,7,ok
+Perak,Manjung,100.695,4.2762,97.0,20,23,ok
+Perak,Perak Tengah,100.903,4.2645,93.8,19,5,ok
+Terengganu,Besut,102.5118,5.5911,100.0,20,21,ok
+Selangor,Sepang,101.7063,2.7881,102.5,20,20,ok
+Selangor,Klang,101.4275,3.0504,94.4,20,9,ok
+Terengganu,Kuala Terengganu,103.084,5.2782,100.1,20,32,ok
+Terengganu,Setiu,102.7926,5.4607,100.8,19,6,ok
+Sabah,Kuala Penyu,115.4884,5.4332,,13,3,too few shops
+Sabah,Ranau,116.6683,5.9039,,15,4,too few shops
+Kelantan,Machang,102.2304,5.7718,100.0,19,12,ok
+Kelantan,Kecil Lojing,101.6112,4.7678,,0,0,no data
+Pahang,Pekan,103.2527,3.3027,100.3,19,15,ok
+Perak,Selama,100.8286,5.2532,,0,0,no data
+Perak,Hilir Perak,101.0726,4.0182,98.1,19,21,ok
+Perak,Kerian,100.5772,4.99,96.9,20,19,ok
+Pahang,Lipis,101.8784,4.3421,96.2,20,10,ok
+Pahang,Raub,101.8464,3.8742,96.3,20,12,ok
+Pahang,Rompin,103.0956,2.9237,99.8,19,20,ok
+Perak,Kampar,101.1879,4.3939,,0,0,no data
+Pahang,Temerloh,102.255,3.6062,101.1,20,31,ok
+Negeri Sembilan,Port Dickson,101.8665,2.5577,103.8,20,11,ok
+Pahang,Bera,102.515,3.1364,98.5,20,13,ok
+Perak,Muallim,101.4747,3.8962,100.0,19,6,ok
+Terengganu,Kemaman,103.1956,4.2419,99.9,20,17,ok
+Selangor,Gombak,101.6556,3.2771,99.9,20,8,ok
+Terengganu,Marang,103.2142,5.0603,101.2,20,10,ok
+Terengganu,Hulu Terengganu,102.8147,5.0756,100.2,20,10,ok
+Kedah,Pendang,100.5493,5.9819,,20,4,too few shops
+Selangor,Ulu Langat,101.8551,3.0715,100.0,20,13,ok
+Selangor,Ulu Selangor,101.5966,3.5636,100.1,20,9,ok
+Perak,Kinta,101.0982,4.5174,94.3,20,40,ok
+Selangor,Sabak Bernam,101.105,3.6784,99.9,20,6,ok
+Sabah,Kota Belud,116.4823,6.3331,100.7,16,6,ok
+Sabah,Kunak,118.0183,4.6875,100.5,16,6,ok
+Selangor,Petaling,101.5509,3.1031,100.0,20,61,ok
+Terengganu,Dungun,103.1443,4.6842,100.0,20,12,ok
+Terengganu,Kuala Nerus,103.0219,5.3635,100.5,20,27,ok
+Kelantan,Jeli,101.815,5.5808,107.1,18,10,ok
+Sabah,Tawau,117.9752,4.4376,102.4,18,18,ok
+Selangor,Kuala Langat,101.5262,2.8131,,17,2,too few shops
+Sabah,Semporna,118.3646,4.4763,100.3,17,9,ok
+Sabah,Beaufort,115.673,5.2923,105.3,17,10,ok
+Sabah,Sipitang,115.6799,4.6363,,17,3,too few shops
+Sabah,Beluran,117.3616,6.1337,,0,0,no data
+Sabah,Sandakan,117.7601,5.7819,100.5,18,16,ok
+Sabah,Kinabatangan,118.1209,5.3326,,0,0,no data
+Kelantan,Pasir Puteh,102.4035,5.8398,98.3,20,12,ok
+Kedah,Padang Terap,100.6855,6.2356,102.1,20,5,ok
+Sabah,Telupid,117.1697,5.7902,,0,0,no data
+Perak,Kuala Kangsar,101.1077,4.7967,96.9,19,20,ok
+Sabah,Kota Kinabalu,116.187,6.0063,100.0,17,16,ok
+Sabah,Lahad Datu,118.4432,5.1187,106.2,17,18,ok
+Perak,Larut Dan Matang,100.6815,4.8144,97.8,20,28,ok
+Kelantan,Kuala Krai,102.1881,5.4284,100.0,19,19,ok
+Sabah,Pitas,117.1172,6.7305,,9,2,too few shops
+Kedah,Kuala Muda,100.514,5.7157,94.9,20,19,ok
+Kelantan,Tumpat,102.1648,6.1688,100.0,20,18,ok
+Kedah,Bandar Baharu,100.6107,5.2086,,0,0,no data
+Sabah,Putatan,116.0614,5.8817,101.8,16,7,ok
+Kedah,Yan,100.4124,5.847,100.0,20,10,ok
+Sabah,Keningau,116.2475,5.2203,102.9,19,20,ok
+Sabah,Tambunan,116.4119,5.6855,,10,3,too few shops
+Sabah,Papar,115.9896,5.6005,100.5,15,7,ok
+Kedah,Kota Setar,100.3688,6.0991,95.2,20,21,ok
+Sabah,Kudat,117.1698,7.2324,102.5,15,7,ok
+Sabah,Kota Marudu,116.8283,6.4465,100.1,17,6,ok
+Sabah,Tongod,116.9914,5.0738,,0,0,no data
+Sabah,Nabawan,116.4824,4.6926,,13,3,too few shops
+Sabah,Tenom,115.9051,4.9107,,12,3,too few shops
+Kelantan,Bachok,102.372,6.0259,100.0,20,15,ok
+Kedah,Kulim,100.6404,5.4025,97.0,20,13,ok
+Kelantan,Kota Bharu,102.2765,6.0562,100.0,20,63,ok
+Sabah,Penampang,116.195,5.8408,102.4,16,6,ok
+Kedah,Kubang Pasu,100.3926,6.3632,97.3,20,19,ok
+Sabah,Kalabakan,117.4154,4.4867,107.4,16,7,ok
+Kelantan,Tanah Merah,102.0401,5.727,100.0,19,20,ok
+Kedah,Sik,100.8005,5.9846,100.3,20,8,ok
+Kelantan,Gua Musang,101.9942,5.0196,100.0,20,18,ok
+Kedah,Pokok Sena,100.5301,6.167,,19,3,too few shops
+Sabah,Tuaran,116.3198,6.0658,100.0,18,14,ok
+Kelantan,Pasir Mas,102.0693,6.019,100.0,20,15,ok
+Kedah,Langkawi,99.7754,6.3663,105.0,18,12,ok

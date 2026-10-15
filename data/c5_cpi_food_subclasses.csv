@@ -1,0 +1,625 @@
+date,subclass,group,index
+2018-01,01111,Rice & cereals,103.0
+2018-01,01122,Meat (incl. chicken),128.1
+2018-01,01131,Fresh fish,147.8
+2018-01,01148,Eggs,120.6
+2018-01,01151,Vegetable oils,119.1
+2018-01,01171,Leafy vegetables,145.8
+2018-02,01111,Rice & cereals,103.1
+2018-02,01122,Meat (incl. chicken),127.3
+2018-02,01131,Fresh fish,149.2
+2018-02,01148,Eggs,117.2
+2018-02,01151,Vegetable oils,119.0
+2018-02,01171,Leafy vegetables,143.2
+2018-03,01111,Rice & cereals,103.3
+2018-03,01122,Meat (incl. chicken),127.9
+2018-03,01131,Fresh fish,147.6
+2018-03,01148,Eggs,115.3
+2018-03,01151,Vegetable oils,119.1
+2018-03,01171,Leafy vegetables,134.0
+2018-04,01111,Rice & cereals,103.6
+2018-04,01122,Meat (incl. chicken),126.8
+2018-04,01131,Fresh fish,146.6
+2018-04,01148,Eggs,108.2
+2018-04,01151,Vegetable oils,119.0
+2018-04,01171,Leafy vegetables,130.5
+2018-05,01111,Rice & cereals,103.5
+2018-05,01122,Meat (incl. chicken),128.1
+2018-05,01131,Fresh fish,145.2
+2018-05,01148,Eggs,112.8
+2018-05,01151,Vegetable oils,118.9
+2018-05,01171,Leafy vegetables,130.5
+2018-06,01111,Rice & cereals,103.4
+2018-06,01122,Meat (incl. chicken),126.4
+2018-06,01131,Fresh fish,147.2
+2018-06,01148,Eggs,113.0
+2018-06,01151,Vegetable oils,118.9
+2018-06,01171,Leafy vegetables,131.2
+2018-07,01111,Rice & cereals,103.6
+2018-07,01122,Meat (incl. chicken),129.9
+2018-07,01131,Fresh fish,147.6
+2018-07,01148,Eggs,113.8
+2018-07,01151,Vegetable oils,118.8
+2018-07,01171,Leafy vegetables,130.6
+2018-08,01111,Rice & cereals,103.7
+2018-08,01122,Meat (incl. chicken),128.9
+2018-08,01131,Fresh fish,148.4
+2018-08,01148,Eggs,116.7
+2018-08,01151,Vegetable oils,118.6
+2018-08,01171,Leafy vegetables,129.9
+2018-09,01111,Rice & cereals,103.9
+2018-09,01122,Meat (incl. chicken),123.9
+2018-09,01131,Fresh fish,147.1
+2018-09,01148,Eggs,121.7
+2018-09,01151,Vegetable oils,118.5
+2018-09,01171,Leafy vegetables,129.0
+2018-10,01111,Rice & cereals,103.9
+2018-10,01122,Meat (incl. chicken),126.1
+2018-10,01131,Fresh fish,145.6
+2018-10,01148,Eggs,122.3
+2018-10,01151,Vegetable oils,118.3
+2018-10,01171,Leafy vegetables,134.8
+2018-11,01111,Rice & cereals,103.9
+2018-11,01122,Meat (incl. chicken),123.4
+2018-11,01131,Fresh fish,145.6
+2018-11,01148,Eggs,121.7
+2018-11,01151,Vegetable oils,118.2
+2018-11,01171,Leafy vegetables,134.8
+2018-12,01111,Rice & cereals,103.7
+2018-12,01122,Meat (incl. chicken),129.4
+2018-12,01131,Fresh fish,145.8
+2018-12,01148,Eggs,130.4
+2018-12,01151,Vegetable oils,118.1
+2018-12,01171,Leafy vegetables,132.8
+2019-01,01111,Rice & cereals,103.7
+2019-01,01122,Meat (incl. chicken),132.8
+2019-01,01131,Fresh fish,149.4
+2019-01,01148,Eggs,130.4
+2019-01,01151,Vegetable oils,117.9
+2019-01,01171,Leafy vegetables,132.2
+2019-02,01111,Rice & cereals,103.8
+2019-02,01122,Meat (incl. chicken),131.3
+2019-02,01131,Fresh fish,148.8
+2019-02,01148,Eggs,132.6
+2019-02,01151,Vegetable oils,118.0
+2019-02,01171,Leafy vegetables,132.6
+2019-03,01111,Rice & cereals,103.8
+2019-03,01122,Meat (incl. chicken),126.0
+2019-03,01131,Fresh fish,146.3
+2019-03,01148,Eggs,131.2
+2019-03,01151,Vegetable oils,117.9
+2019-03,01171,Leafy vegetables,131.1
+2019-04,01111,Rice & cereals,103.8
+2019-04,01122,Meat (incl. chicken),120.9
+2019-04,01131,Fresh fish,145.8
+2019-04,01148,Eggs,122.0
+2019-04,01151,Vegetable oils,117.6
+2019-04,01171,Leafy vegetables,134.1
+2019-05,01111,Rice & cereals,103.8
+2019-05,01122,Meat (incl. chicken),123.0
+2019-05,01131,Fresh fish,146.3
+2019-05,01148,Eggs,121.7
+2019-05,01151,Vegetable oils,117.3
+2019-05,01171,Leafy vegetables,137.8
+2019-06,01111,Rice & cereals,103.7
+2019-06,01122,Meat (incl. chicken),122.4
+2019-06,01131,Fresh fish,146.7
+2019-06,01148,Eggs,119.1
+2019-06,01151,Vegetable oils,117.3
+2019-06,01171,Leafy vegetables,139.3
+2019-07,01111,Rice & cereals,103.7
+2019-07,01122,Meat (incl. chicken),126.2
+2019-07,01131,Fresh fish,146.8
+2019-07,01148,Eggs,119.5
+2019-07,01151,Vegetable oils,117.2
+2019-07,01171,Leafy vegetables,137.7
+2019-08,01111,Rice & cereals,103.6
+2019-08,01122,Meat (incl. chicken),128.9
+2019-08,01131,Fresh fish,148.4
+2019-08,01148,Eggs,126.2
+2019-08,01151,Vegetable oils,117.3
+2019-08,01171,Leafy vegetables,134.6
+2019-09,01111,Rice & cereals,103.8
+2019-09,01122,Meat (incl. chicken),126.1
+2019-09,01131,Fresh fish,147.8
+2019-09,01148,Eggs,127.8
+2019-09,01151,Vegetable oils,117.0
+2019-09,01171,Leafy vegetables,132.7
+2019-10,01111,Rice & cereals,103.7
+2019-10,01122,Meat (incl. chicken),124.8
+2019-10,01131,Fresh fish,146.7
+2019-10,01148,Eggs,128.5
+2019-10,01151,Vegetable oils,117.0
+2019-10,01171,Leafy vegetables,135.9
+2019-11,01111,Rice & cereals,103.7
+2019-11,01122,Meat (incl. chicken),123.4
+2019-11,01131,Fresh fish,146.2
+2019-11,01148,Eggs,123.5
+2019-11,01151,Vegetable oils,117.1
+2019-11,01171,Leafy vegetables,137.7
+2019-12,01111,Rice & cereals,103.8
+2019-12,01122,Meat (incl. chicken),123.6
+2019-12,01131,Fresh fish,148.6
+2019-12,01148,Eggs,119.5
+2019-12,01151,Vegetable oils,117.3
+2019-12,01171,Leafy vegetables,141.3
+2020-01,01111,Rice & cereals,103.8
+2020-01,01122,Meat (incl. chicken),124.2
+2020-01,01131,Fresh fish,149.7
+2020-01,01148,Eggs,115.7
+2020-01,01151,Vegetable oils,117.7
+2020-01,01171,Leafy vegetables,141.0
+2020-02,01111,Rice & cereals,103.9
+2020-02,01122,Meat (incl. chicken),125.7
+2020-02,01131,Fresh fish,148.8
+2020-02,01148,Eggs,112.9
+2020-02,01151,Vegetable oils,118.1
+2020-02,01171,Leafy vegetables,142.1
+2020-03,01111,Rice & cereals,103.9
+2020-03,01122,Meat (incl. chicken),127.1
+2020-03,01131,Fresh fish,146.0
+2020-03,01148,Eggs,114.8
+2020-03,01151,Vegetable oils,120.1
+2020-03,01171,Leafy vegetables,139.2
+2020-04,01111,Rice & cereals,106.6
+2020-04,01122,Meat (incl. chicken),124.7
+2020-04,01131,Fresh fish,145.7
+2020-04,01148,Eggs,118.0
+2020-04,01151,Vegetable oils,118.6
+2020-04,01171,Leafy vegetables,139.1
+2020-05,01111,Rice & cereals,105.9
+2020-05,01122,Meat (incl. chicken),126.8
+2020-05,01131,Fresh fish,146.3
+2020-05,01148,Eggs,117.4
+2020-05,01151,Vegetable oils,118.6
+2020-05,01171,Leafy vegetables,140.9
+2020-06,01111,Rice & cereals,106.0
+2020-06,01122,Meat (incl. chicken),131.3
+2020-06,01131,Fresh fish,146.9
+2020-06,01148,Eggs,116.8
+2020-06,01151,Vegetable oils,118.9
+2020-06,01171,Leafy vegetables,142.0
+2020-07,01111,Rice & cereals,106.0
+2020-07,01122,Meat (incl. chicken),129.8
+2020-07,01131,Fresh fish,147.0
+2020-07,01148,Eggs,117.4
+2020-07,01151,Vegetable oils,119.0
+2020-07,01171,Leafy vegetables,141.5
+2020-08,01111,Rice & cereals,105.9
+2020-08,01122,Meat (incl. chicken),127.8
+2020-08,01131,Fresh fish,147.4
+2020-08,01148,Eggs,121.9
+2020-08,01151,Vegetable oils,119.2
+2020-08,01171,Leafy vegetables,141.9
+2020-09,01111,Rice & cereals,105.9
+2020-09,01122,Meat (incl. chicken),127.2
+2020-09,01131,Fresh fish,147.4
+2020-09,01148,Eggs,116.9
+2020-09,01151,Vegetable oils,119.2
+2020-09,01171,Leafy vegetables,140.3
+2020-10,01111,Rice & cereals,105.9
+2020-10,01122,Meat (incl. chicken),127.0
+2020-10,01131,Fresh fish,147.7
+2020-10,01148,Eggs,115.5
+2020-10,01151,Vegetable oils,119.3
+2020-10,01171,Leafy vegetables,142.3
+2020-11,01111,Rice & cereals,105.8
+2020-11,01122,Meat (incl. chicken),124.6
+2020-11,01131,Fresh fish,147.6
+2020-11,01148,Eggs,115.4
+2020-11,01151,Vegetable oils,119.4
+2020-11,01171,Leafy vegetables,142.3
+2020-12,01111,Rice & cereals,105.8
+2020-12,01122,Meat (incl. chicken),126.6
+2020-12,01131,Fresh fish,148.7
+2020-12,01148,Eggs,117.7
+2020-12,01151,Vegetable oils,119.8
+2020-12,01171,Leafy vegetables,147.0
+2021-01,01111,Rice & cereals,105.8
+2021-01,01122,Meat (incl. chicken),127.2
+2021-01,01131,Fresh fish,149.8
+2021-01,01148,Eggs,118.4
+2021-01,01151,Vegetable oils,120.0
+2021-01,01171,Leafy vegetables,147.9
+2021-02,01111,Rice & cereals,105.8
+2021-02,01122,Meat (incl. chicken),124.9
+2021-02,01131,Fresh fish,150.7
+2021-02,01148,Eggs,119.3
+2021-02,01151,Vegetable oils,120.9
+2021-02,01171,Leafy vegetables,145.8
+2021-03,01111,Rice & cereals,105.9
+2021-03,01122,Meat (incl. chicken),127.8
+2021-03,01131,Fresh fish,150.1
+2021-03,01148,Eggs,114.1
+2021-03,01151,Vegetable oils,122.1
+2021-03,01171,Leafy vegetables,143.6
+2021-04,01111,Rice & cereals,106.0
+2021-04,01122,Meat (incl. chicken),130.8
+2021-04,01131,Fresh fish,151.2
+2021-04,01148,Eggs,115.0
+2021-04,01151,Vegetable oils,122.9
+2021-04,01171,Leafy vegetables,143.1
+2021-05,01111,Rice & cereals,105.8
+2021-05,01122,Meat (incl. chicken),128.6
+2021-05,01131,Fresh fish,150.9
+2021-05,01148,Eggs,115.6
+2021-05,01151,Vegetable oils,123.6
+2021-05,01171,Leafy vegetables,141.5
+2021-06,01111,Rice & cereals,105.9
+2021-06,01122,Meat (incl. chicken),129.2
+2021-06,01131,Fresh fish,152.1
+2021-06,01148,Eggs,119.1
+2021-06,01151,Vegetable oils,124.9
+2021-06,01171,Leafy vegetables,142.7
+2021-07,01111,Rice & cereals,105.9
+2021-07,01122,Meat (incl. chicken),128.5
+2021-07,01131,Fresh fish,152.4
+2021-07,01148,Eggs,120.9
+2021-07,01151,Vegetable oils,125.1
+2021-07,01171,Leafy vegetables,142.6
+2021-08,01111,Rice & cereals,106.0
+2021-08,01122,Meat (incl. chicken),129.2
+2021-08,01131,Fresh fish,153.2
+2021-08,01148,Eggs,122.3
+2021-08,01151,Vegetable oils,124.5
+2021-08,01171,Leafy vegetables,140.9
+2021-09,01111,Rice & cereals,106.1
+2021-09,01122,Meat (incl. chicken),136.9
+2021-09,01131,Fresh fish,153.3
+2021-09,01148,Eggs,126.4
+2021-09,01151,Vegetable oils,124.6
+2021-09,01171,Leafy vegetables,143.4
+2021-10,01111,Rice & cereals,106.2
+2021-10,01122,Meat (incl. chicken),137.9
+2021-10,01131,Fresh fish,153.7
+2021-10,01148,Eggs,126.9
+2021-10,01151,Vegetable oils,125.0
+2021-10,01171,Leafy vegetables,142.9
+2021-11,01111,Rice & cereals,106.3
+2021-11,01122,Meat (incl. chicken),139.2
+2021-11,01131,Fresh fish,153.4
+2021-11,01148,Eggs,125.4
+2021-11,01151,Vegetable oils,125.5
+2021-11,01171,Leafy vegetables,147.5
+2021-12,01111,Rice & cereals,106.2
+2021-12,01122,Meat (incl. chicken),139.3
+2021-12,01131,Fresh fish,155.7
+2021-12,01148,Eggs,132.8
+2021-12,01151,Vegetable oils,126.0
+2021-12,01171,Leafy vegetables,154.7
+2022-01,01111,Rice & cereals,106.1
+2022-01,01122,Meat (incl. chicken),138.8
+2022-01,01131,Fresh fish,156.8
+2022-01,01148,Eggs,132.9
+2022-01,01151,Vegetable oils,126.3
+2022-01,01171,Leafy vegetables,155.7
+2022-02,01111,Rice & cereals,106.2
+2022-02,01122,Meat (incl. chicken),138.3
+2022-02,01131,Fresh fish,157.0
+2022-02,01148,Eggs,133.2
+2022-02,01151,Vegetable oils,126.4
+2022-02,01171,Leafy vegetables,152.1
+2022-03,01111,Rice & cereals,106.0
+2022-03,01122,Meat (incl. chicken),138.6
+2022-03,01131,Fresh fish,157.3
+2022-03,01148,Eggs,133.6
+2022-03,01151,Vegetable oils,126.7
+2022-03,01171,Leafy vegetables,151.1
+2022-04,01111,Rice & cereals,106.2
+2022-04,01122,Meat (incl. chicken),139.3
+2022-04,01131,Fresh fish,157.1
+2022-04,01148,Eggs,134.1
+2022-04,01151,Vegetable oils,127.1
+2022-04,01171,Leafy vegetables,149.6
+2022-05,01111,Rice & cereals,106.2
+2022-05,01122,Meat (incl. chicken),142.3
+2022-05,01131,Fresh fish,158.8
+2022-05,01148,Eggs,134.4
+2022-05,01151,Vegetable oils,127.7
+2022-05,01171,Leafy vegetables,153.7
+2022-06,01111,Rice & cereals,106.5
+2022-06,01122,Meat (incl. chicken),146.6
+2022-06,01131,Fresh fish,160.1
+2022-06,01148,Eggs,134.6
+2022-06,01151,Vegetable oils,128.0
+2022-06,01171,Leafy vegetables,154.7
+2022-07,01111,Rice & cereals,106.4
+2022-07,01122,Meat (incl. chicken),145.5
+2022-07,01131,Fresh fish,160.2
+2022-07,01148,Eggs,137.7
+2022-07,01151,Vegetable oils,130.0
+2022-07,01171,Leafy vegetables,152.9
+2022-08,01111,Rice & cereals,106.5
+2022-08,01122,Meat (incl. chicken),142.5
+2022-08,01131,Fresh fish,159.5
+2022-08,01148,Eggs,138.6
+2022-08,01151,Vegetable oils,128.1
+2022-08,01171,Leafy vegetables,154.1
+2022-09,01111,Rice & cereals,106.6
+2022-09,01122,Meat (incl. chicken),145.0
+2022-09,01131,Fresh fish,158.7
+2022-09,01148,Eggs,138.9
+2022-09,01151,Vegetable oils,127.4
+2022-09,01171,Leafy vegetables,152.2
+2022-10,01111,Rice & cereals,106.6
+2022-10,01122,Meat (incl. chicken),147.4
+2022-10,01131,Fresh fish,158.9
+2022-10,01148,Eggs,139.2
+2022-10,01151,Vegetable oils,125.8
+2022-10,01171,Leafy vegetables,149.0
+2022-11,01111,Rice & cereals,107.0
+2022-11,01122,Meat (incl. chicken),150.4
+2022-11,01131,Fresh fish,159.3
+2022-11,01148,Eggs,139.3
+2022-11,01151,Vegetable oils,124.9
+2022-11,01171,Leafy vegetables,151.9
+2022-12,01111,Rice & cereals,106.9
+2022-12,01122,Meat (incl. chicken),149.8
+2022-12,01131,Fresh fish,160.5
+2022-12,01148,Eggs,139.6
+2022-12,01151,Vegetable oils,124.7
+2022-12,01171,Leafy vegetables,154.6
+2023-01,01111,Rice & cereals,106.8
+2023-01,01122,Meat (incl. chicken),150.1
+2023-01,01131,Fresh fish,161.8
+2023-01,01148,Eggs,140.0
+2023-01,01151,Vegetable oils,124.6
+2023-01,01171,Leafy vegetables,155.9
+2023-02,01111,Rice & cereals,107.2
+2023-02,01122,Meat (incl. chicken),150.9
+2023-02,01131,Fresh fish,162.0
+2023-02,01148,Eggs,140.2
+2023-02,01151,Vegetable oils,124.5
+2023-02,01171,Leafy vegetables,161.2
+2023-03,01111,Rice & cereals,107.4
+2023-03,01122,Meat (incl. chicken),151.7
+2023-03,01131,Fresh fish,162.9
+2023-03,01148,Eggs,140.3
+2023-03,01151,Vegetable oils,124.4
+2023-03,01171,Leafy vegetables,156.4
+2023-04,01111,Rice & cereals,107.3
+2023-04,01122,Meat (incl. chicken),152.3
+2023-04,01131,Fresh fish,162.3
+2023-04,01148,Eggs,140.3
+2023-04,01151,Vegetable oils,124.3
+2023-04,01171,Leafy vegetables,149.9
+2023-05,01111,Rice & cereals,107.7
+2023-05,01122,Meat (incl. chicken),153.2
+2023-05,01131,Fresh fish,163.3
+2023-05,01148,Eggs,140.4
+2023-05,01151,Vegetable oils,124.4
+2023-05,01171,Leafy vegetables,151.2
+2023-06,01111,Rice & cereals,108.0
+2023-06,01122,Meat (incl. chicken),153.4
+2023-06,01131,Fresh fish,162.8
+2023-06,01148,Eggs,140.5
+2023-06,01151,Vegetable oils,124.4
+2023-06,01171,Leafy vegetables,151.1
+2023-07,01111,Rice & cereals,109.0
+2023-07,01122,Meat (incl. chicken),153.2
+2023-07,01131,Fresh fish,161.6
+2023-07,01148,Eggs,140.5
+2023-07,01151,Vegetable oils,124.4
+2023-07,01171,Leafy vegetables,152.2
+2023-08,01111,Rice & cereals,109.7
+2023-08,01122,Meat (incl. chicken),151.0
+2023-08,01131,Fresh fish,161.7
+2023-08,01148,Eggs,140.5
+2023-08,01151,Vegetable oils,124.2
+2023-08,01171,Leafy vegetables,151.5
+2023-09,01111,Rice & cereals,111.9
+2023-09,01122,Meat (incl. chicken),149.2
+2023-09,01131,Fresh fish,160.9
+2023-09,01148,Eggs,140.6
+2023-09,01151,Vegetable oils,124.1
+2023-09,01171,Leafy vegetables,150.9
+2023-10,01111,Rice & cereals,112.3
+2023-10,01122,Meat (incl. chicken),149.5
+2023-10,01131,Fresh fish,159.0
+2023-10,01148,Eggs,140.7
+2023-10,01151,Vegetable oils,124.0
+2023-10,01171,Leafy vegetables,150.7
+2023-11,01111,Rice & cereals,112.0
+2023-11,01122,Meat (incl. chicken),148.4
+2023-11,01131,Fresh fish,156.8
+2023-11,01148,Eggs,140.9
+2023-11,01151,Vegetable oils,123.7
+2023-11,01171,Leafy vegetables,153.7
+2023-12,01111,Rice & cereals,111.8
+2023-12,01122,Meat (incl. chicken),150.6
+2023-12,01131,Fresh fish,158.2
+2023-12,01148,Eggs,140.9
+2023-12,01151,Vegetable oils,123.8
+2023-12,01171,Leafy vegetables,156.2
+2024-01,01111,Rice & cereals,111.8
+2024-01,01122,Meat (incl. chicken),151.8
+2024-01,01131,Fresh fish,158.6
+2024-01,01148,Eggs,140.9
+2024-01,01151,Vegetable oils,123.5
+2024-01,01171,Leafy vegetables,157.5
+2024-02,01111,Rice & cereals,111.7
+2024-02,01122,Meat (incl. chicken),151.2
+2024-02,01131,Fresh fish,158.6
+2024-02,01148,Eggs,141.0
+2024-02,01151,Vegetable oils,123.6
+2024-02,01171,Leafy vegetables,153.4
+2024-03,01111,Rice & cereals,111.8
+2024-03,01122,Meat (incl. chicken),151.5
+2024-03,01131,Fresh fish,158.2
+2024-03,01148,Eggs,141.0
+2024-03,01151,Vegetable oils,123.6
+2024-03,01171,Leafy vegetables,148.5
+2024-04,01111,Rice & cereals,111.4
+2024-04,01122,Meat (incl. chicken),150.0
+2024-04,01131,Fresh fish,157.7
+2024-04,01148,Eggs,140.6
+2024-04,01151,Vegetable oils,123.5
+2024-04,01171,Leafy vegetables,149.5
+2024-05,01111,Rice & cereals,111.5
+2024-05,01122,Meat (incl. chicken),152.2
+2024-05,01131,Fresh fish,156.0
+2024-05,01148,Eggs,140.5
+2024-05,01151,Vegetable oils,123.8
+2024-05,01171,Leafy vegetables,158.7
+2024-06,01111,Rice & cereals,111.4
+2024-06,01122,Meat (incl. chicken),153.4
+2024-06,01131,Fresh fish,157.4
+2024-06,01148,Eggs,140.5
+2024-06,01151,Vegetable oils,123.9
+2024-06,01171,Leafy vegetables,161.4
+2024-07,01111,Rice & cereals,111.6
+2024-07,01122,Meat (incl. chicken),150.7
+2024-07,01131,Fresh fish,158.1
+2024-07,01148,Eggs,137.7
+2024-07,01151,Vegetable oils,124.0
+2024-07,01171,Leafy vegetables,152.6
+2024-08,01111,Rice & cereals,111.6
+2024-08,01122,Meat (incl. chicken),149.3
+2024-08,01131,Fresh fish,157.5
+2024-08,01148,Eggs,137.5
+2024-08,01151,Vegetable oils,124.0
+2024-08,01171,Leafy vegetables,152.2
+2024-09,01111,Rice & cereals,111.6
+2024-09,01122,Meat (incl. chicken),150.2
+2024-09,01131,Fresh fish,158.2
+2024-09,01148,Eggs,137.6
+2024-09,01151,Vegetable oils,124.1
+2024-09,01171,Leafy vegetables,154.6
+2024-10,01111,Rice & cereals,111.4
+2024-10,01122,Meat (incl. chicken),151.7
+2024-10,01131,Fresh fish,157.4
+2024-10,01148,Eggs,137.3
+2024-10,01151,Vegetable oils,124.0
+2024-10,01171,Leafy vegetables,158.4
+2024-11,01111,Rice & cereals,111.5
+2024-11,01122,Meat (incl. chicken),151.3
+2024-11,01131,Fresh fish,156.4
+2024-11,01148,Eggs,137.2
+2024-11,01151,Vegetable oils,124.1
+2024-11,01171,Leafy vegetables,156.8
+2024-12,01111,Rice & cereals,111.6
+2024-12,01122,Meat (incl. chicken),150.0
+2024-12,01131,Fresh fish,158.3
+2024-12,01148,Eggs,136.9
+2024-12,01151,Vegetable oils,124.6
+2024-12,01171,Leafy vegetables,166.2
+2025-01,01111,Rice & cereals,111.4
+2025-01,01122,Meat (incl. chicken),149.8
+2025-01,01131,Fresh fish,158.5
+2025-01,01148,Eggs,136.8
+2025-01,01151,Vegetable oils,125.4
+2025-01,01171,Leafy vegetables,156.3
+2025-02,01111,Rice & cereals,111.4
+2025-02,01122,Meat (incl. chicken),150.5
+2025-02,01131,Fresh fish,158.6
+2025-02,01148,Eggs,136.3
+2025-02,01151,Vegetable oils,125.8
+2025-02,01171,Leafy vegetables,154.6
+2025-03,01111,Rice & cereals,110.8
+2025-03,01122,Meat (incl. chicken),151.0
+2025-03,01131,Fresh fish,160.0
+2025-03,01148,Eggs,136.2
+2025-03,01151,Vegetable oils,125.9
+2025-03,01171,Leafy vegetables,147.6
+2025-04,01111,Rice & cereals,110.8
+2025-04,01122,Meat (incl. chicken),150.0
+2025-04,01131,Fresh fish,159.7
+2025-04,01148,Eggs,134.0
+2025-04,01151,Vegetable oils,126.0
+2025-04,01171,Leafy vegetables,148.9
+2025-05,01111,Rice & cereals,110.8
+2025-05,01122,Meat (incl. chicken),151.9
+2025-05,01131,Fresh fish,158.6
+2025-05,01148,Eggs,133.1
+2025-05,01151,Vegetable oils,126.0
+2025-05,01171,Leafy vegetables,146.8
+2025-06,01111,Rice & cereals,110.9
+2025-06,01122,Meat (incl. chicken),151.6
+2025-06,01131,Fresh fish,159.4
+2025-06,01148,Eggs,134.3
+2025-06,01151,Vegetable oils,126.1
+2025-06,01171,Leafy vegetables,146.3
+2025-07,01111,Rice & cereals,110.9
+2025-07,01122,Meat (incl. chicken),149.0
+2025-07,01131,Fresh fish,160.4
+2025-07,01148,Eggs,134.0
+2025-07,01151,Vegetable oils,126.0
+2025-07,01171,Leafy vegetables,143.5
+2025-08,01111,Rice & cereals,111.0
+2025-08,01122,Meat (incl. chicken),148.2
+2025-08,01131,Fresh fish,161.5
+2025-08,01148,Eggs,135.2
+2025-08,01151,Vegetable oils,126.0
+2025-08,01171,Leafy vegetables,143.7
+2025-09,01111,Rice & cereals,111.1
+2025-09,01122,Meat (incl. chicken),149.7
+2025-09,01131,Fresh fish,161.1
+2025-09,01148,Eggs,140.6
+2025-09,01151,Vegetable oils,126.1
+2025-09,01171,Leafy vegetables,145.7
+2025-10,01111,Rice & cereals,110.9
+2025-10,01122,Meat (incl. chicken),150.0
+2025-10,01131,Fresh fish,160.6
+2025-10,01148,Eggs,143.3
+2025-10,01151,Vegetable oils,126.0
+2025-10,01171,Leafy vegetables,146.6
+2025-11,01111,Rice & cereals,111.1
+2025-11,01122,Meat (incl. chicken),151.8
+2025-11,01131,Fresh fish,160.2
+2025-11,01148,Eggs,136.5
+2025-11,01151,Vegetable oils,126.1
+2025-11,01171,Leafy vegetables,147.1
+2025-12,01111,Rice & cereals,111.0
+2025-12,01122,Meat (incl. chicken),150.6
+2025-12,01131,Fresh fish,162.3
+2025-12,01148,Eggs,140.8
+2025-12,01151,Vegetable oils,126.0
+2025-12,01171,Leafy vegetables,159.5
+2026-01,01111,Rice & cereals,110.9
+2026-01,01122,Meat (incl. chicken),151.5
+2026-01,01131,Fresh fish,162.7
+2026-01,01148,Eggs,142.2
+2026-01,01151,Vegetable oils,125.8
+2026-01,01171,Leafy vegetables,152.4
+2026-02,01111,Rice & cereals,110.6
+2026-02,01122,Meat (incl. chicken),153.0
+2026-02,01131,Fresh fish,163.8
+2026-02,01148,Eggs,140.0
+2026-02,01151,Vegetable oils,125.8
+2026-02,01171,Leafy vegetables,144.7
+2026-03,01111,Rice & cereals,110.6
+2026-03,01122,Meat (incl. chicken),151.7
+2026-03,01131,Fresh fish,163.2
+2026-03,01148,Eggs,139.1
+2026-03,01151,Vegetable oils,125.8
+2026-03,01171,Leafy vegetables,145.1
+2026-04,01111,Rice & cereals,110.8
+2026-04,01122,Meat (incl. chicken),150.1
+2026-04,01131,Fresh fish,162.1
+2026-04,01148,Eggs,133.1
+2026-04,01151,Vegetable oils,125.9
+2026-04,01171,Leafy vegetables,144.8
+2026-05,01111,Rice & cereals,110.8
+2026-05,01122,Meat (incl. chicken),151.2
+2026-05,01131,Fresh fish,161.7
+2026-05,01148,Eggs,131.8
+2026-05,01151,Vegetable oils,126.1
+2026-05,01171,Leafy vegetables,152.1
+2026-06,01111,Rice & cereals,111.0
+2026-06,01122,Meat (incl. chicken),153.3
+2026-06,01131,Fresh fish,161.8
+2026-06,01148,Eggs,136.4
+2026-06,01151,Vegetable oils,126.2
+2026-06,01171,Leafy vegetables,148.1
+2026-07,01111,Rice & cereals,110.7
+2026-07,01122,Meat (incl. chicken),153.9
+2026-07,01131,Fresh fish,161.9
+2026-07,01148,Eggs,139.3
+2026-07,01151,Vegetable oils,126.2
+2026-07,01171,Leafy vegetables,149.9
+2026-08,01111,Rice & cereals,110.9
+2026-08,01122,Meat (incl. chicken),154.0
+2026-08,01131,Fresh fish,162.2
+2026-08,01148,Eggs,143.2
+2026-08,01151,Vegetable oils,126.0
+2026-08,01171,Leafy vegetables,150.7

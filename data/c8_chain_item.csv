@@ -1,0 +1,148 @@
+chain,item,median_rm,index_vs_national,n_shops
+99 Speedmart,"Eggs, Grade B (30)",13.05,90.7,3
+99 Speedmart,"Sardines, Cap Ayam (425g)",9.65,91.9,67
+99 Speedmart,"Cooking oil, Cap Buruh (5kg)",29.9,96.8,79
+99 Speedmart,White sugar (1kg),2.85,100.0,78
+99 Speedmart,"Wheat flour, Cap Sauh (1kg)",2.85,89.1,58
+99 Speedmart,Yellow noodles (450g),2.0,111.1,40
+99 Speedmart,Yellow onion (1kg),3.5,87.7,20
+99 Speedmart,"Garlic, China (1kg)",7.8,86.8,46
+99 Speedmart,Ginger (1kg),10.0,112.4,49
+99 Speedmart,"Potato, China (1kg)",2.6,81.2,18
+99 Speedmart,"Coconut milk, Kara (200ml)",3.75,94.0,73
+99 Speedmart,"Sweetened creamer, F&N (500g)",3.99,95.0,79
+AEON,"Chicken (standard, 1kg)",9.29,98.8,25
+AEON,"Eggs, Grade B (30)",13.47,93.6,32
+AEON,Mackerel / kembung (1kg),17.38,107.3,14
+AEON,White prawns (1kg),39.9,117.4,31
+AEON,"Sardines, Cap Ayam (425g)",10.4,99.0,33
+AEON,"Imported rice, Cap Rambutan (10kg)",36.59,101.7,28
+AEON,"Cooking oil, Cap Buruh (5kg)",30.85,99.8,33
+AEON,White sugar (1kg),2.85,100.0,33
+AEON,"Wheat flour, Cap Sauh (1kg)",3.7,115.5,32
+AEON,Yellow noodles (450g),1.85,102.8,28
+AEON,Yellow onion (1kg),4.9,122.8,33
+AEON,"Garlic, China (1kg)",11.9,132.4,33
+AEON,Ginger (1kg),5.9,66.3,33
+AEON,Tomato (1kg),6.5,68.5,33
+AEON,"Potato, China (1kg)",2.9,90.6,18
+AEON,Carrot (1kg),4.8,120.3,33
+AEON,Calamansi lime (1kg),9.5,158.3,20
+AEON,"Coconut milk, Kara (200ml)",3.59,90.0,33
+AEON,"Sweetened creamer, F&N (500g)",3.9,92.7,32
+AEON,"Milk powder, Dutch Lady (600g)",20.4,102.5,28
+Econsave,"Chicken (standard, 1kg)",8.99,95.6,62
+Econsave,"Eggs, Grade B (30)",13.0,90.3,57
+Econsave,Mackerel / kembung (1kg),13.79,85.1,38
+Econsave,White prawns (1kg),33.59,98.8,63
+Econsave,"Sardines, Cap Ayam (425g)",9.8,93.3,67
+Econsave,"Cooking oil, Cap Buruh (5kg)",29.9,96.8,69
+Econsave,White sugar (1kg),2.85,100.0,70
+Econsave,"Wheat flour, Cap Sauh (1kg)",3.0,93.8,68
+Econsave,Yellow noodles (450g),1.69,94.2,66
+Econsave,Yellow onion (1kg),2.39,59.9,70
+Econsave,"Garlic, China (1kg)",7.5,83.4,65
+Econsave,Ginger (1kg),6.99,78.5,71
+Econsave,Tomato (1kg),7.99,84.2,70
+Econsave,"Potato, China (1kg)",1.99,62.2,61
+Econsave,Carrot (1kg),2.49,62.4,66
+Econsave,Calamansi lime (1kg),4.99,83.2,70
+Econsave,"Coconut milk, Kara (200ml)",3.6,90.2,65
+Econsave,"Sweetened creamer, F&N (500g)",3.9,92.9,67
+Econsave,"Milk powder, Dutch Lady (600g)",19.9,100.0,44
+Giant,"Chicken (standard, 1kg)",9.15,97.3,23
+Giant,"Eggs, Grade B (30)",12.9,89.6,29
+Giant,Mackerel / kembung (1kg),16.9,104.3,5
+Giant,White prawns (1kg),27.99,82.3,23
+Giant,"Sardines, Cap Ayam (425g)",9.65,91.9,26
+Giant,"Cooking oil, Cap Buruh (5kg)",29.9,96.8,30
+Giant,White sugar (1kg),2.85,100.0,30
+Giant,"Wheat flour, Cap Sauh (1kg)",2.95,92.2,30
+Giant,Yellow noodles (450g),1.9,105.6,27
+Giant,Yellow onion (1kg),2.99,74.9,30
+Giant,"Garlic, China (1kg)",6.79,75.5,30
+Giant,Ginger (1kg),5.99,67.3,23
+Giant,Tomato (1kg),7.96,83.9,24
+Giant,"Potato, China (1kg)",2.29,71.6,30
+Giant,Carrot (1kg),2.49,62.4,28
+Giant,Calamansi lime (1kg),5.99,99.8,23
+Giant,"Coconut milk, Kara (200ml)",4.2,105.3,26
+Giant,"Sweetened creamer, F&N (500g)",3.99,95.0,30
+Giant,"Milk powder, Dutch Lady (600g)",20.4,102.5,20
+Lotus's,"Chicken (standard, 1kg)",7.99,85.0,39
+Lotus's,"Eggs, Grade B (30)",12.99,90.3,39
+Lotus's,White prawns (1kg),29.99,88.2,33
+Lotus's,"Sardines, Cap Ayam (425g)",9.65,91.9,21
+Lotus's,"Imported rice, Cap Rambutan (10kg)",34.9,97.0,38
+Lotus's,"Cooking oil, Cap Buruh (5kg)",28.95,93.7,39
+Lotus's,White sugar (1kg),2.85,100.0,39
+Lotus's,"Wheat flour, Cap Sauh (1kg)",3.0,93.8,38
+Lotus's,Yellow noodles (450g),1.8,100.0,39
+Lotus's,Yellow onion (1kg),3.99,100.0,39
+Lotus's,"Garlic, China (1kg)",6.99,77.8,39
+Lotus's,Ginger (1kg),5.99,67.3,39
+Lotus's,Tomato (1kg),7.89,83.1,39
+Lotus's,"Potato, China (1kg)",2.24,70.0,39
+Lotus's,Carrot (1kg),1.99,49.9,39
+Lotus's,Calamansi lime (1kg),4.58,76.3,38
+Lotus's,"Coconut milk, Kara (200ml)",3.75,94.0,35
+Lotus's,"Sweetened creamer, F&N (500g)",3.79,90.2,39
+Mydin,"Chicken (standard, 1kg)",8.89,94.6,29
+Mydin,"Eggs, Grade B (30)",14.59,101.4,24
+Mydin,Mackerel / kembung (1kg),13.9,85.8,17
+Mydin,White prawns (1kg),31.9,93.8,29
+Mydin,"Sardines, Cap Ayam (425g)",9.8,93.3,26
+Mydin,"Imported rice, Cap Rambutan (10kg)",38.5,107.0,27
+Mydin,"Cooking oil, Cap Buruh (5kg)",29.89,96.7,32
+Mydin,White sugar (1kg),2.85,100.0,32
+Mydin,"Wheat flour, Cap Sauh (1kg)",3.0,93.8,29
+Mydin,Yellow noodles (450g),1.79,99.4,28
+Mydin,Yellow onion (1kg),2.64,66.2,31
+Mydin,"Garlic, China (1kg)",6.89,76.6,30
+Mydin,Ginger (1kg),6.99,78.5,30
+Mydin,Tomato (1kg),8.9,93.8,30
+Mydin,"Potato, China (1kg)",1.99,62.2,31
+Mydin,Carrot (1kg),2.29,57.4,30
+Mydin,Calamansi lime (1kg),4.74,79.0,30
+Mydin,"Coconut milk, Kara (200ml)",3.9,97.7,31
+Mydin,"Sweetened creamer, F&N (500g)",4.19,99.8,32
+Mydin,"Milk powder, Dutch Lady (600g)",18.5,93.0,28
+TF Value,"Chicken (standard, 1kg)",8.99,95.6,29
+TF Value,"Eggs, Grade B (30)",13.6,94.5,29
+TF Value,Mackerel / kembung (1kg),16.99,104.9,3
+TF Value,White prawns (1kg),28.99,85.3,29
+TF Value,"Sardines, Cap Ayam (425g)",10.5,100.0,29
+TF Value,"Imported rice, Cap Rambutan (10kg)",35.49,98.6,29
+TF Value,"Cooking oil, Cap Buruh (5kg)",30.59,99.0,29
+TF Value,White sugar (1kg),2.85,100.0,29
+TF Value,"Wheat flour, Cap Sauh (1kg)",2.99,93.4,29
+TF Value,Yellow noodles (450g),1.7,94.4,29
+TF Value,Yellow onion (1kg),3.99,100.0,29
+TF Value,"Garlic, China (1kg)",8.99,100.0,29
+TF Value,Ginger (1kg),5.99,67.3,29
+TF Value,Tomato (1kg),8.99,94.7,29
+TF Value,"Potato, China (1kg)",2.39,74.7,28
+TF Value,Carrot (1kg),2.49,62.4,29
+TF Value,Calamansi lime (1kg),4.49,74.8,29
+TF Value,"Coconut milk, Kara (200ml)",3.49,87.5,29
+TF Value,"Sweetened creamer, F&N (500g)",3.99,95.0,29
+TF Value,"Milk powder, Dutch Lady (600g)",19.8,99.5,18
+Village Grocer,"Chicken (standard, 1kg)",9.89,105.2,6
+Village Grocer,"Eggs, Grade B (30)",13.5,93.8,11
+Village Grocer,Mackerel / kembung (1kg),27.9,172.2,4
+Village Grocer,White prawns (1kg),65.9,193.8,3
+Village Grocer,"Sardines, Cap Ayam (425g)",10.45,99.5,10
+Village Grocer,"Cooking oil, Cap Buruh (5kg)",30.9,100.0,11
+Village Grocer,White sugar (1kg),2.85,100.0,11
+Village Grocer,"Wheat flour, Cap Sauh (1kg)",3.9,121.9,11
+Village Grocer,Yellow noodles (450g),2.2,122.2,11
+Village Grocer,Yellow onion (1kg),5.2,130.3,11
+Village Grocer,"Garlic, China (1kg)",11.65,129.6,11
+Village Grocer,Ginger (1kg),8.3,93.3,11
+Village Grocer,Tomato (1kg),9.9,104.3,11
+Village Grocer,"Potato, China (1kg)",3.1,96.9,11
+Village Grocer,Carrot (1kg),4.4,110.3,11
+Village Grocer,Calamansi lime (1kg),8.65,144.2,11
+Village Grocer,"Coconut milk, Kara (200ml)",4.3,107.8,10
+Village Grocer,"Sweetened creamer, F&N (500g)",4.5,107.1,11
+Village Grocer,"Milk powder, Dutch Lady (600g)",20.3,102.0,7

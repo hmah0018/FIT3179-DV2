@@ -1,0 +1,262 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Observed grocery price distributions across Malaysian shop types using the 5th percentile, quartiles, median and 95th percentile.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/c7_box_shop_type.csv"
+  },
+  "params": [
+    {
+      "name": "selectedItem",
+      "value": "Eggs, Grade B (30)"
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.item === selectedItem"
+    },
+    {
+      "calculate": "'RM' + format(datum.median, '.2f')",
+      "as": "median_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#7b8794",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "shop_type",
+          "type": "nominal",
+          "sort": {
+            "field": "median",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null,
+            "labelFontSize": 11,
+            "labelColor": "#435166",
+            "labelPadding": 8,
+            "ticks": false,
+            "domain": false
+          }
+        },
+        "x": {
+          "field": "p05",
+          "type": "quantitative",
+          "axis": {
+            "title": "Observed price (RM)",
+            "titleFontSize": 11,
+            "titlePadding": 12,
+            "labelFontSize": 10,
+            "labelColor": "#5f6b7a",
+            "labelExpr": "datum.value % 1 === 0 ? format(datum.value, '.0f') : ''",
+            "grid": true,
+            "gridColor": "#e8e5df",
+            "gridOpacity": 0.8,
+            "domainColor": "#aeb7c0",
+            "tickColor": "#aeb7c0"
+          },
+          "scale": {
+            "zero": false,
+            "nice": true
+          }
+        },
+        "x2": {
+          "field": "p95"
+        },
+        "tooltip": [
+          {
+            "field": "item",
+            "type": "nominal",
+            "title": "Grocery item"
+          },
+          {
+            "field": "shop_type",
+            "type": "nominal",
+            "title": "Shop type"
+          },
+          {
+            "field": "p05",
+            "type": "quantitative",
+            "title": "5th percentile (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "q1",
+            "type": "quantitative",
+            "title": "Q1 (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "median",
+            "type": "quantitative",
+            "title": "Median (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "q3",
+            "type": "quantitative",
+            "title": "Q3 (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "p95",
+            "type": "quantitative",
+            "title": "95th percentile (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "n_shops",
+            "type": "quantitative",
+            "title": "Observed shops",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "size": 18,
+        "thickness": 2,
+        "color": "#7b8794"
+      },
+      "encoding": {
+        "y": {
+          "field": "shop_type",
+          "type": "nominal",
+          "sort": {
+            "field": "median",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "p05",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "size": 18,
+        "thickness": 2,
+        "color": "#7b8794"
+      },
+      "encoding": {
+        "y": {
+          "field": "shop_type",
+          "type": "nominal",
+          "sort": {
+            "field": "median",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "p95",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "height": 28,
+        "cornerRadius": 3,
+        "fill": "#cbd1d8",
+        "stroke": "#7b8794",
+        "strokeWidth": 1.3
+      },
+      "encoding": {
+        "y": {
+          "field": "shop_type",
+          "type": "nominal",
+          "sort": {
+            "field": "median",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "q1",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "q3"
+        },
+        "tooltip": [
+          {
+            "field": "item",
+            "type": "nominal",
+            "title": "Grocery item"
+          },
+          {
+            "field": "shop_type",
+            "type": "nominal",
+            "title": "Shop type"
+          },
+          {
+            "field": "q1",
+            "type": "quantitative",
+            "title": "Q1 (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "median",
+            "type": "quantitative",
+            "title": "Median (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "q3",
+            "type": "quantitative",
+            "title": "Q3 (RM)",
+            "format": ".2f"
+          },
+          {
+            "field": "n_shops",
+            "type": "quantitative",
+            "title": "Observed shops",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "size": 30,
+        "thickness": 3,
+        "color": "#183153"
+      },
+      "encoding": {
+        "y": {
+          "field": "shop_type",
+          "type": "nominal",
+          "sort": {
+            "field": "median",
+            "order": "ascending"
+          }
+        },
+        "x": {
+          "field": "median",
+          "type": "quantitative"
+        }
+      }
+    }
+    
+  ],
+  "config": {
+    "background": null,
+    "view": {
+      "stroke": null
+    }
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Malaysia food CPI inflation with contextual policy annotations.",
+
+  "width": "container",
+  "height": 290,
+
+  "data": {
+    "url": "data/c1_food_inflation_national.csv"
+  },
+
+  "layer": [
+
+    {
+      "mark": {
+        "type": "line",
+        "color": "#d97732",
+        "strokeWidth": 2.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+
+          "axis": {
+            "title": null,
+            "format": "%Y",
+            "tickCount": 8,
+            "grid": false,
+            "labelAngle": 0,
+            "labelFontSize": 11
+          }
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [0, 9]
+          },
+
+          "axis": {
+            "title": "Food inflation (%)",
+            "grid": true,
+            "gridColor": "#e8e5df",
+            "gridOpacity": 0.8,
+            "labelFontSize": 11,
+            "titleFontSize": 11
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%B %Y"
+          },
+
+          {
+            "field": "yoy",
+            "type": "quantitative",
+            "title": "Food inflation",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2015-04-01"
+          },
+          {
+            "date": "2018-09-01"
+          },
+          {
+            "date": "2023-11-01"
+          },
+          {
+            "date": "2025-08-01"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "rule",
+        "color": "#aeb8c2",
+        "strokeWidth": 1,
+        "strokeDash": [4, 4]
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2015-04-01",
+            "y": 8.25,
+            "label": "GST introduced"
+          },
+
+          {
+            "date": "2018-09-01",
+            "y": 7.75,
+            "label": "SST introduced"
+          },
+
+          {
+            "date": "2023-11-01",
+            "y": 8.35,
+            "label": "Chicken controls end"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#65707c"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 9]
+          }
+        },
+
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2025-08-01",
+            "y": 7.35,
+            "label": "Egg subsidy ends"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -5,
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#65707c"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 9]
+          }
+        },
+
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2022-11-01",
+            "yoy": 7.3
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 80,
+        "color": "#183153",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2022-11-01",
+            "yoy": 7.3,
+            "label": "Peak 7.3%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -8,
+        "dy": -8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#183153"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2026-08-01",
+            "yoy": 1.9
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#d97732",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative"
+        }
+      }
+    },
+
+
+    {
+      "data": {
+        "values": [
+          {
+            "date": "2026-08-01",
+            "yoy": 1.9,
+            "label": "Latest 1.9%"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -10,
+        "dy": -28,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#d97732"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative"
+        },
+
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 0.001,
+        "size": 130
+      },
+
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+
+        "y": {
+          "field": "yoy",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%B %Y"
+          },
+
+          {
+            "field": "yoy",
+            "type": "quantitative",
+            "title": "Food inflation",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+
+  ],
+
+  "config": {
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelColor": "#526071",
+      "titleColor": "#526071",
+      "domainColor": "#b9c0c8",
+      "tickColor": "#b9c0c8"
+    }
+  }
+}

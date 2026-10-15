@@ -1,0 +1,21 @@
+p05,q1,median,q3,p95,n_shops,item,shop_type
+7.99,8.49,8.99,9.29,10.54,116,"Chicken (standard, 1kg)",Hypermarket
+8.84,9.5,9.9,10.5,11.5,89,"Chicken (standard, 1kg)",Sundry shop
+9.4,9.8,10.5,11.0,11.8,248,"Chicken (standard, 1kg)",Wet market
+8.82,9.09,9.5,10.0,11.0,226,"Chicken (standard, 1kg)",Mini market
+8.49,8.99,9.0,9.51,10.99,512,"Chicken (standard, 1kg)",Supermarket
+6.99,7.89,7.99,8.9,12.0,148,Tomato (1kg),Hypermarket
+6.5,9.0,10.0,11.0,12.99,161,Tomato (1kg),Sundry shop
+8.0,9.0,10.0,10.0,12.0,299,Tomato (1kg),Wet market
+6.9,8.9,9.9,11.0,13.0,362,Tomato (1kg),Mini market
+7.44,7.99,8.99,10.0,12.9,650,Tomato (1kg),Supermarket
+28.95,29.85,29.9,30.89,30.9,145,"Cooking oil, Cap Buruh (5kg)",Hypermarket
+30.9,30.9,30.9,30.9,30.9,161,"Cooking oil, Cap Buruh (5kg)",Sundry shop
+30.5,30.9,30.9,30.9,30.9,23,"Cooking oil, Cap Buruh (5kg)",Wet market
+29.4,29.9,30.9,30.9,30.9,471,"Cooking oil, Cap Buruh (5kg)",Mini market
+29.83,30.44,30.9,30.9,30.9,633,"Cooking oil, Cap Buruh (5kg)",Supermarket
+12.78,12.99,13.6,14.59,15.96,130,"Eggs, Grade B (30)",Hypermarket
+13.0,14.0,14.7,15.5,17.5,201,"Eggs, Grade B (30)",Sundry shop
+13.2,14.0,14.5,15.3,17.0,184,"Eggs, Grade B (30)",Wet market
+13.0,14.09,14.7,15.29,16.26,370,"Eggs, Grade B (30)",Mini market
+12.9,13.3,13.9,14.67,16.2,574,"Eggs, Grade B (30)",Supermarket

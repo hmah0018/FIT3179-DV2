@@ -1,0 +1,322 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Ranked dot plot showing the share of common grocery items for which each supermarket chain is cheaper than the national median.",
+
+  "width": "container",
+  "height": 270,
+
+  "data": {
+    "url": "data/c8_chain_item.csv"
+  },
+
+  "transform": [
+    {
+      "calculate": "datum.price_index < 100 ? 1 : 0",
+      "as": "cheaper_flag"
+    },
+
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "cheaper_flag",
+          "as": "cheaper_items"
+        },
+        {
+          "op": "count",
+          "as": "total_items"
+        },
+        {
+          "op": "mean",
+          "field": "price_index",
+          "as": "avg_price_index"
+        }
+      ],
+      "groupby": [
+        "chain"
+      ]
+    },
+
+    {
+      "calculate": "datum.cheaper_items / datum.total_items * 100",
+      "as": "cheaper_pct"
+    },
+
+    {
+        "joinaggregate": [
+            {
+            "op": "max",
+            "field": "cheaper_pct",
+            "as": "max_cheaper_pct"
+            }
+        ]
+    },
+
+    {
+      "calculate": "0",
+      "as": "baseline"
+    },
+
+    {
+      "calculate": "format(datum.cheaper_pct, '.0f') + '%'",
+      "as": "pct_label"
+    },
+
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "overall_order"
+        }
+      ],
+      "sort": [
+        {
+          "field": "cheaper_pct",
+          "order": "descending"
+        },
+        {
+          "field": "avg_price_index",
+          "order": "ascending"
+        }
+      ]
+    }
+  ],
+
+  "layer": [
+
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "strokeCap": "round"
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "chain",
+          "type": "nominal",
+
+          "sort": {
+            "field": "cheaper_pct",
+            "order": "descending"
+          },
+
+          "axis": {
+            "title": null,
+            "labelFontSize": 11,
+            "labelFontWeight": 600,
+            "labelColor": "#435166",
+            "labelPadding": 10,
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "x": {
+          "field": "baseline",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [
+              0,
+              105
+            ]
+          },
+
+          "axis": {
+            "title": "Common grocery items cheaper than national median (%)",
+
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ],
+
+            "labelExpr": "datum.value + '%'",
+            "labelFontSize": 10,
+            "labelColor": "#68717d",
+
+            "titleFontSize": 11,
+            "titleFontWeight": 600,
+            "titleColor": "#435166",
+
+            "grid": true,
+            "gridColor": "#e5e8eb",
+            "gridOpacity": 1,
+
+            "ticks": false,
+            "domain": false
+          }
+        },
+
+        "x2": {
+          "field": "cheaper_pct"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.cheaper_pct === datum.max_cheaper_pct",
+            "value": "#d97732"
+          },
+
+          "value": "#c7d0d8"
+        }
+      }
+    },
+
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "chain",
+          "type": "nominal",
+
+          "sort": {
+            "field": "cheaper_pct",
+            "order": "descending"
+          }
+        },
+
+        "x": {
+          "field": "cheaper_pct",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [
+              0,
+              105
+            ]
+          }
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.cheaper_pct === datum.max_cheaper_pct",
+            "value": "#d97732"
+          },
+
+          "value": "#28496f"
+        },
+
+        "size": {
+          "condition": {
+            "test": "datum.overall_order === 1",
+            "value": 190
+          },
+
+          "value": 125
+        },
+
+        "tooltip": [
+          {
+            "field": "chain",
+            "type": "nominal",
+            "title": "Supermarket chain"
+          },
+
+          {
+            "field": "cheaper_items",
+            "type": "quantitative",
+            "title": "Items cheaper than median",
+            "format": ".0f"
+          },
+
+          {
+            "field": "total_items",
+            "type": "quantitative",
+            "title": "Common items compared",
+            "format": ".0f"
+          },
+
+          {
+            "field": "cheaper_pct",
+            "type": "quantitative",
+            "title": "Share cheaper (%)",
+            "format": ".1f"
+          },
+
+          {
+            "field": "avg_price_index",
+            "type": "quantitative",
+            "title": "Average price index",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11,
+        "fontWeight": 700
+      },
+
+      "encoding": {
+
+        "y": {
+          "field": "chain",
+          "type": "nominal",
+
+          "sort": {
+            "field": "cheaper_pct",
+            "order": "descending"
+          }
+        },
+
+        "x": {
+          "field": "cheaper_pct",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [
+              0,
+              105
+            ]
+          }
+        },
+
+        "text": {
+          "field": "pct_label"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum.cheaper_pct === datum.max_cheaper_pct",
+            "value": "#d97732"
+          },
+
+          "value": "#435166"
+        }
+      }
+    }
+  ],
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

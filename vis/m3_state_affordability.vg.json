@@ -1,0 +1,501 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Dorling-style cartogram showing grocery affordability relative to median household income across Malaysian states.",
+
+  "width": "container",
+  "height": 390,
+
+  "data": {
+    "url": "data/m3_c9_state_affordability.csv"
+  },
+
+  "transform": [
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "values": [
+            {"state": "Perlis", "x_pos": 2.2, "y_pos": 0.55},
+            {"state": "Kedah", "x_pos": 2.35, "y_pos": 1.35},
+            {"state": "Kelantan", "x_pos": 3.75, "y_pos": 1.35},
+            {"state": "Pulau Pinang", "x_pos": 1.35, "y_pos": 2.05},
+            {"state": "Perak", "x_pos": 2.35, "y_pos": 2.25},
+            {"state": "Terengganu", "x_pos": 3.95, "y_pos": 2.25},
+            {"state": "Pahang", "x_pos": 3.55, "y_pos": 3.25},
+            {"state": "Selangor", "x_pos": 1.55, "y_pos": 3.55},
+            {"state": "W.P. Kuala Lumpur", "x_pos": 2.75, "y_pos": 3.45},
+            {"state": "W.P. Putrajaya", "x_pos": 3.05, "y_pos": 4.3},
+            {"state": "Negeri Sembilan", "x_pos": 1.75, "y_pos": 4.45},
+            {"state": "Melaka", "x_pos": 1.85, "y_pos": 5.15},
+            {"state": "Johor", "x_pos": 3.0, "y_pos": 5.25},
+            {"state": "Sarawak", "x_pos": 7.9, "y_pos": 3.45},
+            {"state": "W.P. Labuan", "x_pos": 9.0, "y_pos": 1.65},
+            {"state": "Sabah", "x_pos": 10.0, "y_pos": 1.95}
+          ]
+        },
+        "key": "state",
+        "fields": [
+          "x_pos",
+          "y_pos"
+        ]
+      }
+    },
+
+    {
+      "calculate": "isValid(datum.share_of_income) ? format(datum.share_of_income, '.1f') + '%' : 'N/A'",
+      "as": "share_label"
+    }
+  ],
+
+  "layer": [
+
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2.55,
+            "y": 0.05,
+            "label": "PENINSULAR MALAYSIA"
+          },
+          {
+            "x": 8.9,
+            "y": 0.95,
+            "label": "EAST MALAYSIA"
+          }
+        ]
+      },
+
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "color": "#9aa3ac"
+      },
+
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.status === 'ok'"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "opacity": 0.93,
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "x_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "size": {
+          "field": "income_median",
+          "type": "quantitative",
+
+          "title": "Median income (RM)",
+
+          "scale": {
+            "domain": [
+              4000,
+              11000
+            ],
+            "range": [
+              650,
+              2400
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "values": [
+              4000,
+              7000,
+              10000
+            ],
+
+            "title": "Median income (RM)",
+
+            "titleFontSize": 9,
+            "titleFontWeight": 600,
+            "titleColor": "#435166",
+
+            "labelFontSize": 8,
+            "labelColor": "#526071",
+
+            "format": ",.0f"
+          }
+        },
+
+        "color": {
+          "field": "share_of_income",
+          "type": "quantitative",
+
+          "title": "Panel cost / income (%)",
+
+          "scale": {
+            "domain": [
+              1.5,
+              4.5
+            ],
+            "domainMid": 3,
+            "range": [
+              "#4f7fa8",
+              "#eee8dc",
+              "#d97732"
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "gradientLength": 150,
+            "gradientThickness": 10,
+
+            "title": "Panel cost / income (%)",
+
+            "titleFontSize": 9,
+            "titleFontWeight": 600,
+            "titleColor": "#435166",
+
+            "labelFontSize": 8,
+            "labelColor": "#526071",
+
+            "format": ".1f"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "basket_rm",
+            "type": "quantitative",
+            "title": "Grocery panel (RM)",
+            "format": ",.2f"
+          },
+          {
+            "field": "income_median",
+            "type": "quantitative",
+            "title": "Median monthly income (RM)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share_of_income",
+            "type": "quantitative",
+            "title": "Panel as % of income",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.status === 'ok'"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "color": "#183153",
+        "baseline": "middle",
+        "dy": -5
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "x_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "text": {
+          "field": "code"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.status === 'ok'"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 7,
+        "fontWeight": "bold",
+        "color": "#435166",
+        "baseline": "middle",
+        "dy": 7
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "x_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "text": {
+          "field": "share_label"
+        }
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.status !== 'ok'"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "stroke": "#8f99a3",
+        "strokeWidth": 1.4,
+        "opacity": 0.7
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "x_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "size": {
+          "field": "income_median",
+          "type": "quantitative",
+
+          "scale": {
+            "domain": [
+              4000,
+              11000
+            ],
+            "range": [
+              650,
+              2400
+            ]
+          },
+
+          "legend": null
+        },
+
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "income_median",
+            "type": "quantitative",
+            "title": "Median monthly income (RM)",
+            "format": ",.0f"
+          },
+          {
+            "value": "Insufficient grocery-price coverage",
+            "title": "Status"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum.status !== 'ok'"
+        }
+      ],
+
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 8,
+        "fontWeight": "bold",
+        "color": "#68717d"
+      },
+
+      "encoding": {
+
+        "x": {
+          "field": "x_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0.5,
+              10.8
+            ]
+          }
+        },
+
+        "y": {
+          "field": "y_pos",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [
+              0,
+              5.8
+            ],
+            "reverse": true
+          }
+        },
+
+        "text": {
+          "field": "code"
+        }
+      }
+    }
+
+  ],
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

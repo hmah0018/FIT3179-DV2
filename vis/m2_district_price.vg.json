@@ -1,0 +1,244 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Proportional-symbol map of district grocery price indices and PriceCatcher coverage in August 2026.",
+
+  "width": "container",
+  "height": 430,
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "layer": [
+
+    {
+      "data": {
+        "url": "data/malaysia_states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f1eee7",
+        "stroke": "#c7cdd3",
+        "strokeWidth": 0.9
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/m2_district_price.csv"
+      },
+
+      "transform": [
+        {
+          "filter": "datum.status === 'ok' && isValid(datum.price_index)"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "opacity": 0.82,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+
+      "encoding": {
+
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+
+        "color": {
+          "field": "price_index",
+          "type": "quantitative",
+
+          "title": "District price index",
+
+          "scale": {
+            "domain": [
+              93,
+              100,
+              121
+            ],
+            "range": [
+              "#315b89",
+              "#f4f1e8",
+              "#d97732"
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "gradientLength": 220,
+            "gradientThickness": 11,
+
+            "title": "Price index · 100 = national median",
+
+            "titleFontSize": 10,
+            "titleFontWeight": 600,
+            "titleColor": "#435166",
+
+            "labelFontSize": 9,
+            "labelColor": "#526071"
+          }
+        },
+
+        "size": {
+          "field": "n_shops",
+          "type": "quantitative",
+
+          "title": "Active shops",
+
+          "scale": {
+            "domain": [
+              5,
+              183
+            ],
+            "range": [
+              35,
+              900
+            ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+
+            "values": [
+              5,
+              25,
+              75,
+              150
+            ],
+
+            "title": "PriceCatcher shops",
+
+            "titleFontSize": 10,
+            "titleFontWeight": 600,
+            "titleColor": "#435166",
+
+            "labelFontSize": 9,
+            "labelColor": "#526071"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "district",
+            "type": "nominal",
+            "title": "District"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "price_index",
+            "type": "quantitative",
+            "title": "Price index",
+            "format": ".1f"
+          },
+          {
+            "field": "n_items",
+            "type": "quantitative",
+            "title": "Panel items observed",
+            "format": ".0f"
+          },
+          {
+            "field": "n_shops",
+            "type": "quantitative",
+            "title": "Active shops",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/m2_district_price.csv"
+      },
+
+      "transform": [
+        {
+          "filter": "datum.status === 'too few shops'"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "size": 24,
+        "stroke": "#9aa3ac",
+        "strokeWidth": 1,
+        "opacity": 0.55
+      },
+
+      "encoding": {
+
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "district",
+            "type": "nominal",
+            "title": "District"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "n_shops",
+            "type": "quantitative",
+            "title": "Observed shops",
+            "format": ".0f"
+          },
+          {
+            "value": "Insufficient coverage",
+            "title": "Status"
+          }
+        ]
+      }
+    }
+
+  ],
+
+  "config": {
+
+    "background": null,
+
+    "view": {
+      "stroke": null
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
+}

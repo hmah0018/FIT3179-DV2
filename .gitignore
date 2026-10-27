@@ -1,0 +1,11 @@
+.venv/
+Dataset/
+.DS_Store
+__pycache__/
+*.pyc
+
+*.pdf
+*.doc
+*.docx
+*.xlsx
+*.xls

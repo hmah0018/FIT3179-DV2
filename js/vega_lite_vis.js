@@ -154,3 +154,48 @@ vegaEmbed(
   );
 
 });
+
+// C8
+vegaEmbed(
+  "#c8_chain_item",
+  "vis/c8_chain_item.vg.json?v=4",
+  {
+    actions: false
+  }
+)
+.then(function () {
+  console.log("C8 loaded successfully");
+})
+.catch(function (error) {
+  console.error("C8 FAILED:", error);
+});
+
+// M2
+vegaEmbed(
+  "#m2_district_price",
+  "vis/m2_district_price.vg.json?v=1",
+  {
+    actions: false
+  }
+)
+.then(function () {
+  console.log("M2 loaded successfully");
+})
+.catch(function (error) {
+  console.error("M2 FAILED:", error);
+});
+
+// M3
+vegaEmbed(
+  "#m3_state_affordability",
+  "vis/m3_state_affordability.vg.json?v=2",
+  {
+    actions: false
+  }
+)
+.then(function () {
+  console.log("M3 loaded successfully");
+})
+.catch(function (error) {
+  console.error("M3 FAILED:", error);
+});

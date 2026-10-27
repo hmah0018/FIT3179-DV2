@@ -16,13 +16,16 @@
     --max-width: 1380px;
     --radius: 12px;
 }
+
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 88px;
 }
+
 body {
     margin: 0;
     font-family:
@@ -35,25 +38,32 @@ body {
     color: var(--text);
     line-height: 1.55;
 }
+
 h1,
 h2,
 h3,
 p {
     margin-top: 0;
 }
+
 a {
     color: inherit;
 }
+
 img,
 svg {
     max-width: 100%;
 }
+
 section[id] {
     scroll-margin-top: 88px;
 }
+
+
 /* =========================================================
    NAVIGATION
 ========================================================= */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -63,6 +73,7 @@ section[id] {
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
+
 .nav-inner {
     width: 100%;
     max-width: var(--max-width);
@@ -73,30 +84,37 @@ section[id] {
     justify-content: space-between;
     gap: 30px;
 }
+
 .site-title {
     color: var(--navy);
     font-size: 0.95rem;
     font-weight: 800;
     text-decoration: none;
 }
+
 .site-nav {
     display: flex;
     align-items: center;
     gap: 28px;
     font-size: 0.88rem;
 }
+
 .site-nav a {
     color: var(--muted);
     text-decoration: none;
     transition: color 0.2s ease;
 }
+
 .site-nav a:hover,
 .site-nav a:focus-visible {
     color: var(--orange);
 }
+
+
 /* =========================================================
    HERO
 ========================================================= */
+
 .hero {
     width: 100%;
     min-height: 330px;
@@ -110,6 +128,7 @@ section[id] {
         );
     border-bottom: 1px solid var(--border);
 }
+
 .hero-inner {
     width: 100%;
     max-width: var(--max-width);
@@ -122,7 +141,10 @@ section[id] {
     gap: 54px;
     align-items: center;
 }
+
+
 /* CART + COPY */
+
 .hero-main {
     min-width: 0;
     display: grid;
@@ -132,6 +154,7 @@ section[id] {
     gap: 28px;
     align-items: center;
 }
+
 .hero-icon {
     width: 92px;
     margin: 0;
@@ -142,14 +165,21 @@ section[id] {
     font-size: 4.7rem;
     line-height: 1;
 }
+
 .hero-copy {
     min-width: 0;
 }
+
+
 /* We already show the topic in the navigation. */
+
 .hero .eyebrow {
     display: none;
 }
+
+
 /* HERO TITLE */
+
 .hero h1 {
     margin: 0 0 20px;
     color: var(--navy);
@@ -164,12 +194,16 @@ section[id] {
     letter-spacing: -0.055em;
     white-space: nowrap;
 }
+
 .hero h1 span {
     display: block;
     color: var(--orange);
     white-space: nowrap;
 }
+
+
 /* HERO TEXT */
+
 .hero-lead {
     width: 100%;
     max-width: 720px;
@@ -178,6 +212,7 @@ section[id] {
     font-size: 1.05rem;
     line-height: 1.55;
 }
+
 .hero-method {
     width: 100%;
     max-width: 720px;
@@ -186,7 +221,10 @@ section[id] {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+
 /* KPI CARDS */
+
 .hero-kpis {
     width: 100%;
     display: grid;
@@ -198,6 +236,7 @@ section[id] {
     gap: 10px;
     align-items: stretch;
 }
+
 .kpi-card {
     min-width: 0;
     min-height: 164px;
@@ -209,6 +248,7 @@ section[id] {
         0 6px 24px
         rgba(20, 40, 70, 0.045);
 }
+
 .stat-value {
     margin: 0 0 7px;
     color: var(--orange);
@@ -216,6 +256,7 @@ section[id] {
     font-weight: 800;
     line-height: 1;
 }
+
 .stat-label {
     margin: 0 0 7px;
     color: var(--navy);
@@ -223,28 +264,37 @@ section[id] {
     font-weight: 700;
     line-height: 1.35;
 }
+
 .stat-detail {
     margin: 0;
     color: var(--muted);
     font-size: 0.7rem;
     line-height: 1.4;
 }
+
+
 /* =========================================================
    STORY SECTIONS
 ========================================================= */
+
 .story-section {
     padding: 88px 32px;
     background: var(--white);
 }
+
 .section-light {
     background: var(--cream);
 }
+
 .section-inner {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
 }
+
+
 /* SECTION HEADING */
+
 .section-heading {
     width: 100%;
     max-width: 920px;
@@ -253,6 +303,7 @@ section[id] {
     align-items: flex-start;
     gap: 20px;
 }
+
 .section-number {
     flex: 0 0 auto;
     width: 46px;
@@ -268,6 +319,7 @@ section[id] {
     font-size: 0.8rem;
     font-weight: 800;
 }
+
 .section-eyebrow {
     margin: 0 0 5px;
     color: var(--orange);
@@ -276,6 +328,7 @@ section[id] {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
 .section-heading h2 {
     margin: 0 0 10px;
     color: var(--navy);
@@ -288,13 +341,17 @@ section[id] {
     line-height: 1.08;
     letter-spacing: -0.035em;
 }
+
 .section-subtitle {
     max-width: 760px;
     margin: 0;
     color: var(--muted);
     font-size: 1.02rem;
 }
+
+
 /* CALLOUT */
+
 .section-callout {
     width: 100%;
     margin: 0 0 30px;
@@ -307,12 +364,16 @@ section[id] {
     color: var(--muted);
     font-size: 0.9rem;
 }
+
 .section-callout strong {
     color: var(--navy);
 }
+
+
 /* =========================================================
    CHART CARDS
 ========================================================= */
+
 .chart-card {
     min-width: 0;
     margin-bottom: 28px;
@@ -326,12 +387,18 @@ section[id] {
         0 4px 18px
         rgba(18, 37, 63, 0.035);
 }
+
+
 /* Slight contrast against white sections */
+
 .story-section:not(.section-light):not(.takeaways-section)
 .chart-card {
     background: #fbfaf7;
 }
+
+
 /* CHART HEADERS */
+
 .chart-header {
     margin-bottom: 14px;
     display: flex;
@@ -339,12 +406,14 @@ section[id] {
     justify-content: space-between;
     gap: 10px;
 }
+
 .chart-header h3 {
     margin: 0 0 6px;
     color: var(--navy);
     font-size: 1rem;
     line-height: 1.2;
 }
+
 .chart-header p {
     max-width: 680px;
     margin: 0;
@@ -352,6 +421,7 @@ section[id] {
     font-size: 0.75rem;
     line-height: 1.45;
 }
+
 .chart-code {
     margin:
         0 0 4px
@@ -365,7 +435,10 @@ section[id] {
     font-weight: 800;
     letter-spacing: 0.08em;
 }
+
+
 /* BADGES */
+
 .idiom-badge {
     flex: 0 0 auto;
     padding: 4px 7px;
@@ -375,15 +448,20 @@ section[id] {
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
+
 .idiom-badge.basic {
     color: var(--navy);
     background: var(--blue-light);
 }
+
 .idiom-badge.advanced {
     color: #943f17;
     background: #ffe1ca;
 }
+
+
 /* CHART NOTES */
+
 .chart-note {
     margin: 16px 0 0;
     padding-top: 14px;
@@ -395,13 +473,17 @@ section[id] {
     font-style: italic;
     line-height: 1.45;
 }
+
+
 /* =========================================================
    CHART GRIDS
 ========================================================= */
+
 /* SECTION 1
    C1 C2
    C3 M1
 */
+
 .section1-grid {
     display: grid;
     grid-template-columns:
@@ -412,77 +494,104 @@ section[id] {
     gap: 20px;
     align-items: stretch;
 }
+
 .section1-grid .chart-card {
     margin-bottom: 0;
 }
+
 .section1-grid .vis-container {
     min-height: 330px;
 }
+
+
 /* SECTION 2 */
+
 .section2-grid {
     display: grid;
+
     /* C4 keeps extra width for its long product labels. */
     grid-template-columns:
         minmax(0, 1.25fr)
         minmax(0, 1fr);
+
     gap: 20px;
     align-items: stretch;
 }
+
 .section2-grid .chart-card {
     margin-bottom: 0;
 }
+
 .section2-grid .vis-container {
     width: 100%;
     min-height: 600px;
 }
+
+
 /* SECTION 3 */
+
 .section3-waffle {
     margin-bottom: 20px;
 }
+
 .section3-waffle .vis-container {
     min-height: 360px;
 }
+
 .section3-grid {
     display: grid;
-    grid-template-columns:
-        repeat(
-            2,
-            minmax(0, 1fr)
-        );
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: stretch;
 }
+
 .section3-grid .chart-card {
     margin-bottom: 0;
 }
+
 .section3-grid .explanation-card {
     grid-column: 1 / -1;
 }
+
+
 /* SECTION 4 */
+
 .section4-grid {
     display: grid;
-    grid-template-columns:
-        1.7fr
-        0.85fr
-        0.85fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
     align-items: stretch;
 }
+
 .section4-grid .chart-card {
     margin-bottom: 0;
 }
+
+.section4-grid .vis-container {
+    min-height: 430px;
+}
+
+.section4-grid + .section-callout {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
 /* =========================================================
    VISUALISATION CONTAINERS
 ========================================================= */
+
 .vis-container {
     width: 100%;
     min-height: 300px;
     overflow: hidden;
 }
+
 .vega-embed,
 .vega-embed > div {
     width: 100% !important;
 }
+
 .chart-placeholder {
     min-height: 270px;
     margin: 0;
@@ -497,12 +606,16 @@ section[id] {
     font-size: 0.84rem;
     text-align: center;
 }
+
+
 /* =========================================================
    FORM CONTROLS
 ========================================================= */
+
 .chart-control {
     margin-bottom: 20px;
 }
+
 .chart-control label {
     display: block;
     margin-bottom: 7px;
@@ -510,6 +623,7 @@ section[id] {
     font-size: 0.75rem;
     font-weight: 700;
 }
+
 .chart-control select {
     width: 100%;
     max-width: 280px;
@@ -522,9 +636,12 @@ section[id] {
     color: var(--text);
     font: inherit;
 }
+
+
 /* =========================================================
    BOX PLOT EXPLANATION
 ========================================================= */
+
 .explanation-card {
     height: 100%;
     margin: 0;
@@ -536,39 +653,49 @@ section[id] {
     background:
         rgba(102, 134, 181, 0.07);
 }
+
 .explanation-card h3 {
     margin: 0 0 10px;
     color: var(--navy);
     font-size: 1rem;
 }
+
 .explanation-card p {
     margin: 0 0 10px;
     color: var(--muted);
     font-size: 0.82rem;
 }
+
 .explanation-card p:last-child {
     margin-bottom: 0;
 }
+
+
 /* =========================================================
    TAKEAWAYS
 ========================================================= */
+
 .takeaways-section {
     background: var(--navy);
     color: var(--white);
 }
+
 .takeaways-section
 .section-number {
     border-color: var(--white);
     color: var(--white);
 }
+
 .takeaways-section
 .section-eyebrow {
     color: var(--orange-light);
 }
+
 .takeaways-section
 .section-heading h2 {
     color: var(--white);
 }
+
 .takeaways-section
 .section-subtitle {
     color:
@@ -579,6 +706,7 @@ section[id] {
             0.72
         );
 }
+
 .takeaway-grid {
     display: grid;
     grid-template-columns:
@@ -588,6 +716,7 @@ section[id] {
         );
     gap: 24px;
 }
+
 .takeaway-card {
     padding: 28px;
     border:
@@ -607,6 +736,7 @@ section[id] {
             0.06
         );
 }
+
 .takeaway-number {
     width: 36px;
     height: 36px;
@@ -620,10 +750,12 @@ section[id] {
     font-size: 0.8rem;
     font-weight: 800;
 }
+
 .takeaway-card h3 {
     margin: 0 0 10px;
     color: var(--white);
 }
+
 .takeaway-card p {
     margin: 0;
     color:
@@ -635,14 +767,18 @@ section[id] {
         );
     font-size: 0.9rem;
 }
+
+
 /* =========================================================
    FOOTER
 ========================================================= */
+
 .site-footer {
     padding: 56px 32px;
     background: #101d30;
     color: var(--white);
 }
+
 .footer-inner {
     width: 100%;
     max-width: var(--max-width);
@@ -655,6 +791,7 @@ section[id] {
         );
     gap: 40px;
 }
+
 .footer-block h3 {
     margin: 0 0 14px;
     color: var(--orange-light);
@@ -662,6 +799,7 @@ section[id] {
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
+
 .footer-block p {
     margin: 0 0 8px;
     color:
@@ -673,16 +811,21 @@ section[id] {
         );
     font-size: 0.78rem;
 }
+
+
 /* =========================================================
    RESPONSIVE
 ========================================================= */
+
 @media (max-width: 1180px) {
+
     .hero-inner {
         grid-template-columns:
             minmax(0, 1fr)
             390px;
         gap: 36px;
     }
+
     .hero h1 {
         font-size:
             clamp(
@@ -691,9 +834,11 @@ section[id] {
                 4.5rem
             );
     }
+
     .section2-grid {
         grid-template-columns: 1fr;
     }
+
     .section3-grid,
     .section4-grid {
         grid-template-columns:
@@ -702,84 +847,105 @@ section[id] {
                 minmax(0, 1fr)
             );
     }
+
     .section3-grid
     .explanation-card {
         grid-column:
             1 / -1;
     }
-    .section4-grid
-    .map-card-large {
-        grid-column:
-            1 / -1;
-    }
 }
+
+
 @media (max-width: 950px) {
+
     .site-nav {
         gap: 18px;
         font-size: 0.82rem;
     }
+
     .hero-inner {
         grid-template-columns: 1fr;
         gap: 30px;
         padding-top: 44px;
         padding-bottom: 48px;
     }
+
     .hero-kpis {
         max-width: 680px;
         margin-left: 120px;
     }
+
     .takeaway-grid,
     .footer-inner {
         grid-template-columns:
             repeat(2,minmax(0, 1fr));
     }
+
+    .section4-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
+
 @media (max-width: 720px) {
+
     .nav-inner {
         padding: 14px 20px;
     }
+
     .site-nav {
         display: none;
     }
+
     .hero-inner {
         padding:
             38px 20px 44px;
     }
+
     .hero-main {
         grid-template-columns: 1fr;
         gap: 18px;
     }
+
     .hero-icon {
         width: auto;
         justify-content: flex-start;
         font-size: 4rem;
     }
+
     .hero h1,
     .hero h1 span {
         white-space: normal;
     }
+
     .hero h1 {
         font-size:
             clamp(3rem,14vw,4.2rem);
     }
+
     .hero-kpis {
         margin-left: 0;
         grid-template-columns: 1fr;
     }
+
     .kpi-card {
         min-height: auto;
     }
+
     .story-section {
         padding:
             64px 20px;
     }
+
     .section-heading {
         gap: 14px;
     }
+
     .section-number {
         width: 40px;
         height: 40px;
     }
+
     .section1-grid,
     .section2-grid,
     .section3-grid,
@@ -788,20 +954,23 @@ section[id] {
     .footer-inner {
         grid-template-columns: 1fr;
     }
+
     .section3-grid
-    .explanation-card,
-    .section4-grid
-    .map-card-large {
+    .explanation-card {
         grid-column: auto;
     }
+
     .site-footer {
         padding:
             48px 20px;
     }
 }
+
+
 /* =========================================================
    C4 LEGEND
 ========================================================= */
+
 .c4-legend {
     display: flex;
     align-items: center;
@@ -811,30 +980,38 @@ section[id] {
     color: #435166;
     font-size: 0.72rem;
 }
+
 .c4-legend .legend-title {
     color: #183153;
     font-weight: 700;
 }
+
 .c4-legend .legend-item {
     display: inline-flex;
     align-items: center;
     gap: 5px;
 }
+
 .c4-legend .legend-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     display: inline-block;
 }
+
 .c4-legend .legend-dot.increase {
     background: #d97732;
 }
+
 .c4-legend .legend-dot.decrease {
     background: #6686b5;
 }
+
+
 /* =========================================================
    C6 WAFFLE
 ========================================================= */
+
 .c6-content {
     display: grid;
     grid-template-columns:
@@ -843,13 +1020,17 @@ section[id] {
     gap: 32px;
     align-items: stretch;
 }
+
+
 /* LEFT — WAFFLE + DIRECT LABELS */
+
 .c6-chart-area {
     min-width: 0;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 .section3-waffle .vis-container,
 #c6_waffle {
     width: 100%;
@@ -857,11 +1038,15 @@ section[id] {
     margin: 0;
     overflow: visible;
 }
+
 #c6_waffle .vega-embed,
 #c6_waffle .vega-embed > div {
     width: 100% !important;
 }
+
+
 /* CAVEAT DIRECTLY BELOW SUBTITLE */
+
 .chart-header .c6-note {
     margin-top: 8px;
     max-width: 680px;
@@ -870,6 +1055,8 @@ section[id] {
     font-weight: 600;
     line-height: 1.45;
 }
+
+
 /* RIGHT — COMPACT SUPPORT PANEL */
 
 .c6-support-card {
@@ -924,20 +1111,26 @@ section[id] {
     line-height: 1.45;
 }
 
+
 /* RESPONSIVE */
+
 @media (max-width: 950px) {
+
     .c6-content {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+
     .section3-waffle .vis-container,
     #c6_waffle {
         min-height: 500px;
     }
+
     .c6-support-card {
         min-height: 180px;
     }
 }
+
 
 .c6-side-column {
     min-width: 0;
@@ -994,4 +1187,304 @@ section[id] {
 
 .c6-colour-swatch.packaged {
     background: #8E5D7A;
+}
+
+
+/* =========================================================
+   SECTION 3 — NEW C6 + C7 / C8 LAYOUT
+========================================================= */
+
+/* C6 + C7 SIDE BY SIDE */
+
+.section3-top-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+    gap: 20px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.section3-top-grid .chart-card {
+    min-width: 0;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+
+/* C8 FULL WIDTH BELOW */
+
+.section3-bottom {
+    width: 100%;
+}
+
+.section3-bottom .chart-card {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   C6 — COMPACT WAFFLE CARD
+========================================================= */
+
+.section3-waffle {
+    margin-bottom: 0;
+}
+
+.section3-waffle .vis-container,
+#c6_waffle {
+    width: 100%;
+    min-height: 390px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#c6_waffle .vega-embed,
+#c6_waffle .vega-embed > div {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+
+/* C6 METHOD NOTE */
+
+.chart-header .c6-note {
+    margin-top: 8px;
+    max-width: 620px;
+    color: #435166;
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+
+/* C6 COMPACT COLOUR KEY */
+
+.c6-compact-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #dfe3e7;
+}
+
+.c6-colour-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #435166;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.c6-colour-swatch {
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.c6-colour-swatch.protein {
+    background: #203864;
+}
+
+.c6-colour-swatch.staples {
+    background: #2A9D8F;
+}
+
+.c6-colour-swatch.produce {
+    background: #E9C46A;
+}
+
+.c6-colour-swatch.packaged {
+    background: #8E5D7A;
+}
+
+
+/* =========================================================
+   C7 — BOX PLOT
+========================================================= */
+
+.section3-top-grid #c7_box_shop_type {
+    width: 100%;
+    min-height: 390px;
+}
+
+.boxplot-note {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   C8 — BUMP CHART
+========================================================= */
+
+.section3-bottom #c8_chain_item {
+    width: 100%;
+    min-height: 450px;
+}
+
+
+/* =========================================================
+   SECTION 3 RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .section3-top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section3-top-grid #c6_waffle,
+    .section3-top-grid #c7_box_shop_type {
+        min-height: 400px;
+    }
+
+    .section3-bottom #c8_chain_item {
+        min-height: 420px;
+    }
+}
+
+
+/* =========================================================
+   C6 KEY TAKEAWAY
+========================================================= */
+
+.c6-main {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(150px, 0.55fr);
+    gap: 18px;
+    align-items: center;
+}
+
+.c6-main #c6_waffle {
+    min-width: 0;
+}
+
+.c6-key-point {
+    padding: 18px 16px;
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    background: rgba(217, 119, 50, 0.06);
+}
+
+.c6-key-label {
+    margin: 0 0 6px;
+    color: var(--orange);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.c6-key-number {
+    margin: 0 0 5px;
+    color: var(--navy);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.c6-key-point h4 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 0.82rem;
+    line-height: 1.3;
+}
+
+.c6-key-point > p:last-child {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 950px) {
+
+    .c6-main {
+        grid-template-columns: 1fr;
+    }
+
+    .c6-key-point {
+        border-left: 0;
+        border-top: 3px solid var(--orange);
+    }
+}
+
+
+/* =========================================================
+   C8 — CHAIN COMPARISON
+========================================================= */
+
+.c8-content {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(220px, 0.65fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.c8-content #c8_chain_item {
+    width: 100%;
+    min-height: 300px;
+    overflow: visible;
+}
+
+.c8-insight-card {
+    min-width: 0;
+    padding: 18px 20px;
+    border-left: 3px solid var(--orange);
+    border-radius: 8px;
+    background: rgba(217, 119, 50, 0.055);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.c8-side-label {
+    margin: 0 0 6px;
+    color: var(--orange);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.c8-insight-card h4 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 0.86rem;
+    line-height: 1.3;
+}
+
+.c8-insight-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.72rem;
+    line-height: 1.5;
+}
+
+.c8-insight-card strong {
+    color: var(--navy);
+}
+
+.c8-insight-section + .c8-insight-section {
+    padding-top: 14px;
+    border-top: 1px solid rgba(217, 119, 50, 0.16);
+}
+
+@media (max-width: 950px) {
+
+    .c8-content {
+        grid-template-columns: 1fr;
+    }
+
+    .c8-insight-card {
+        border-left: 0;
+        border-top: 3px solid var(--orange);
+    }
 }

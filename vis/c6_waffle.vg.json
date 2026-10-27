@@ -1,474 +1,138 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A 100-cell waffle chart showing the normalized composition of the fixed grocery panel.",
-  "width": 800,
-  "height": 520,
-  "layer": [
+  "width": 360,
+  "height": 390,
+
+  "data": {
+    "url": "data/c6_waffle.csv"
+  },
+
+  "transform": [
     {
-      "data": {
-        "url": "data/c6_waffle.csv"
-      },
-      "transform": [
+      "calculate": "datum.group === 'Protein' ? 1 : datum.group === 'Staples' ? 2 : datum.group === 'Fresh produce' ? 3 : 4",
+      "as": "group_order"
+    },
+    {
+      "window": [
         {
-          "calculate": "datum.group === 'Protein' ? 1 : datum.group === 'Staples' ? 2 : datum.group === 'Fresh produce' ? 3 : 4",
-          "as": "group_order"
-        },
-        {
-          "window": [
-            {
-              "op": "sum",
-              "field": "cells",
-              "as": "cum_cells"
-            }
-          ],
-          "sort": [
-            {
-              "field": "group_order",
-              "order": "ascending"
-            }
-          ]
-        },
-        {
-          "calculate": "datum.cum_cells - datum.cells",
-          "as": "start_cell"
-        },
-        {
-          "calculate": "sequence(datum.start_cell, datum.cum_cells)",
-          "as": "cell_id"
-        },
-        {
-          "flatten": [
-            "cell_id"
-          ]
-        },
-        {
-          "calculate": "floor(datum.cell_id / 10)",
-          "as": "col"
-        },
-        {
-          "calculate": "datum.cell_id % 10",
-          "as": "row"
+          "op": "sum",
+          "field": "cells",
+          "as": "cum_cells"
         }
       ],
-      "mark": {
-        "type": "square",
-        "filled": true,
-        "size": 1800,
-        "stroke": "#ffffff",
-        "strokeWidth": 1.6,
-        "cursor": "pointer"
-      },
-      "encoding": {
-        "x": {
-          "field": "col",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "row",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "color": {
-          "field": "group",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Protein",
-              "Staples",
-              "Fresh produce",
-              "Packaged"
-            ],
-            "range": [
-              "#203864",
-              "#2A9D8F",
-              "#E9C46A",
-              "#8E5D7A"
-            ]
-          },
-          "legend": null
-        },
-        "tooltip": [
-          {
-            "field": "group",
-            "type": "nominal",
-            "title": "Product group"
-          },
-          {
-            "field": "cells",
-            "type": "quantitative",
-            "title": "Squares"
-          },
-          {
-            "field": "share_pct",
-            "type": "quantitative",
-            "title": "Share of panel (%)",
-            "format": ".1f"
-          },
-          {
-            "field": "items",
-            "type": "nominal",
-            "title": "Included products"
-          }
-        ]
-      }
+      "sort": [
+        {
+          "field": "group_order",
+          "order": "ascending"
+        }
+      ]
     },
     {
-      "data": {
-        "values": [
-          {
-            "group": "Protein",
-            "x": 3.2,
-            "x2": 10.2,
-            "y": 1.4
-          },
-          {
-            "group": "Staples",
-            "x": 6.2,
-            "x2": 10.2,
-            "y": 3.8
-          },
-          {
-            "group": "Fresh produce",
-            "x": 8.2,
-            "x2": 10.2,
-            "y": 6.2
-          },
-          {
-            "group": "Packaged",
-            "x": 9.2,
-            "x2": 10.2,
-            "y": 8.4
-          }
-        ]
-      },
-      "mark": {
-        "type": "rule",
-        "strokeWidth": 1.6
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "x2": {
-          "field": "x2"
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "color": {
-          "field": "group",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Protein",
-              "Staples",
-              "Fresh produce",
-              "Packaged"
-            ],
-            "range": [
-              "#203864",
-              "#2A9D8F",
-              "#E9C46A",
-              "#8E5D7A"
-            ]
-          },
-          "legend": null
-        }
-      }
+      "calculate": "datum.cum_cells - datum.cells",
+      "as": "start_cell"
     },
     {
-      "data": {
-        "values": [
-          {
-            "x": 10.45,
-            "y": 1.4,
-            "label": "Protein · 37 squares"
-          },
-          {
-            "x": 10.45,
-            "y": 3.8,
-            "label": "Staples · 32 squares"
-          },
-          {
-            "x": 10.45,
-            "y": 6.2,
-            "label": "Fresh produce · 19 squares"
-          },
-          {
-            "x": 10.45,
-            "y": 8.4,
-            "label": "Packaged · 12 squares"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "bottom",
-        "dy": -2,
-        "fontSize": 12,
-        "fontWeight": 700,
-        "color": "#183153"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "calculate": "sequence(datum.start_cell, datum.cum_cells)",
+      "as": "cell_id"
     },
     {
-      "data": {
-        "values": [
-          {
-            "x": 10.45,
-            "y": 1.4,
-            "label": "36.6%"
-          },
-          {
-            "x": 10.45,
-            "y": 3.8,
-            "label": "32.4%"
-          },
-          {
-            "x": 10.45,
-            "y": 6.2,
-            "label": "18.7%"
-          },
-          {
-            "x": 10.45,
-            "y": 8.4,
-            "label": "12.3%"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "dy": 3,
-        "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#5f6b7a"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "flatten": [
+        "cell_id"
+      ]
     },
     {
-      "data": {
-        "values": [
-          {
-            "x": -0.25,
-            "x2": 6.35,
-            "y": -0.72
-          }
-        ]
-      },
-      "mark": {
-        "type": "rule",
-        "stroke": "#183153",
-        "strokeWidth": 1.6
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "x2": {
-          "field": "x2"
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        }
-      }
+      "calculate": "floor(datum.cell_id / 10)",
+      "as": "col"
     },
     {
-      "data": {
-        "values": [
-          {
-            "x": -0.25,
-            "y": -0.72,
-            "y2": -0.36
-          },
-          {
-            "x": 6.35,
-            "y": -0.72,
-            "y2": -0.36
-          }
-        ]
-      },
-      "mark": {
-        "type": "rule",
-        "stroke": "#183153",
-        "strokeWidth": 1.6
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "y2": {
-          "field": "y2"
-        }
-      }
-    },
-    {
-      "data": {
-        "values": [
-          {
-            "x": 3.05,
-            "y": -1.05,
-            "label": "69% = protein + staples"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "fontSize": 12,
-        "fontWeight": 700,
-        "color": "#183153"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              -0.5,
-              15.5
-            ]
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "y",
-          "type": "quantitative",
-          "scale": {
-            "domain": [
-              9.5,
-              -1.5
-            ]
-          },
-          "axis": null
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "calculate": "datum.cell_id % 10",
+      "as": "row"
     }
   ],
+
+  "mark": {
+    "type": "square",
+    "filled": true,
+    "size": 1050,
+    "stroke": "#ffffff",
+    "strokeWidth": 1.8,
+    "cursor": "pointer"
+  },
+
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          -0.5,
+          9.5
+        ]
+      },
+      "axis": null
+    },
+
+    "y": {
+      "field": "row",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          9.5,
+          -0.5
+        ]
+      },
+      "axis": null
+    },
+
+    "color": {
+      "field": "group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Protein",
+          "Staples",
+          "Fresh produce",
+          "Packaged"
+        ],
+        "range": [
+          "#203864",
+          "#2A9D8F",
+          "#E9C46A",
+          "#8E5D7A"
+        ]
+      },
+      "legend": null
+    },
+
+    "tooltip": [
+      {
+        "field": "group",
+        "type": "nominal",
+        "title": "Product group"
+      },
+      {
+        "field": "cells",
+        "type": "quantitative",
+        "title": "Squares"
+      },
+      {
+        "field": "share_pct",
+        "type": "quantitative",
+        "title": "Share of panel (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "items",
+        "type": "nominal",
+        "title": "Included products"
+      }
+    ]
+  },
+
   "config": {
     "background": null,
+
     "view": {
       "stroke": null
     }

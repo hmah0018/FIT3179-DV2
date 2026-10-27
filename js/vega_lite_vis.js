@@ -83,7 +83,7 @@ vegaEmbed(
 // C5
 vegaEmbed(
   "#c5_food_subclasses",
-  "vis/c5_food_subclasses.vg.json?v=3",
+  "vis/c5_food_subclasses.vg.json?v=4",
   { actions: false }
 )
 .then(function () {
@@ -158,7 +158,7 @@ vegaEmbed(
 // C8
 vegaEmbed(
   "#c8_chain_item",
-  "vis/c8_chain_item.vg.json?v=4",
+  "vis/c8_chain_item.vg.json?v=5",
   {
     actions: false
   }

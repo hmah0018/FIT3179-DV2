@@ -1,1209 +1,1215 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <title>Same Trolley, Different Bill</title>
 
-    <title>Same Trolley, Different Bill</title>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
 <body>
 
-    <!-- =========================================================
-         STICKY NAVIGATION
-    ========================================================== -->
+  <!-- NAVIGATION -->
 
-    <header class="site-header">
+  <header class="site-header">
+    <div class="nav-inner">
 
-        <div class="nav-inner">
+      <a href="#top" class="site-title">
+        Grocery Prices in Malaysia
+      </a>
 
-            <a
-                href="#top"
-                class="site-title"
-            >
-                Grocery Prices in Malaysia
-            </a>
+      <nav class="site-nav">
+        <a href="#big-picture">Big picture</a>
+        <a href="#items">Items</a>
+        <a href="#shops">Shops</a>
+        <a href="#geography">Where you live</a>
+        <a href="#takeaways">Takeaways</a>
+      </nav>
 
-            <nav class="site-nav">
+    </div>
+  </header>
 
-                <a href="#big-picture">
-                    Big picture
-                </a>
+  <main>
 
-                <a href="#items">
-                    Items
-                </a>
+    <!-- HERO -->
 
-                <a href="#shops">
-                    Shops
-                </a>
+    <section id="top" class="hero">
+      <div class="hero-inner">
 
-                <a href="#geography">
-                    Where you live
-                </a>
+        <div class="hero-main">
+          <div class="hero-icon">🛒</div>
 
-                <a href="#takeaways">
-                    Takeaways
-                </a>
+          <div class="hero-copy">
 
-            </nav>
+            <p class="eyebrow">
+              Grocery prices in Malaysia
+            </p>
+
+            <h1>
+              Same Trolley,
+              <span>Different Bill</span>
+            </h1>
+
+            <p class="hero-lead">
+              A grocery bill depends on more than national
+              inflation. Explore which items changed,
+              where shopping costs differ, and why
+              the same panel can feel less affordable
+              in some states.
+            </p>
+
+            <p class="hero-method">
+              Official CPI data and observed PriceCatcher
+              prices answer different questions.
+              The comparisons cover August 2022 to
+              August 2026. The affordability view uses
+              2024 household income.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="hero-kpis">
+
+          <div class="kpi-card">
+            <p class="stat-value">+50%</p>
+            <p class="stat-label">
+              Tomato observed price change
+            </p>
+            <p class="stat-detail">
+              Aug 2022 &rarr; Aug 2026
+            </p>
+          </div>
+
+          <div class="kpi-card">
+            <p class="stat-value">20</p>
+            <p class="stat-label">Grocery products</p>
+            <p class="stat-detail">
+              Fixed national panel
+            </p>
+          </div>
+
+          <div class="kpi-card">
+            <p class="stat-value">5 years</p>
+            <p class="stat-label">
+              PriceCatcher comparison
+            </p>
+            <p class="stat-detail">
+              2022 &rarr; 2026
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: BIG PICTURE -->
+
+    <section
+      id="big-picture"
+      class="story-section section-light"
+    >
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <div class="section-number">01</div>
+
+          <div>
+            <p class="section-eyebrow">
+              Official CPI
+            </p>
+
+            <h2>
+              The big picture: food inflation
+            </h2>
+
+            <p class="section-subtitle">
+              How fast have food prices risen,
+              and is the experience the same
+              across Malaysia?
+            </p>
+          </div>
 
         </div>
 
-    </header>
+        <div class="section-callout">
+          <p class="callout-copy">
+            <strong>CPI = inflation.</strong>
+            This section uses official Consumer Price
+            Index data. PriceCatcher observations
+            are treated separately later.
+          </p>
+        </div>
 
-    <main>
+        <div class="section1-grid">
 
-        <!-- =====================================================
-             HERO
-        ====================================================== -->
+          <!-- C1 -->
 
-        <section
-            id="top"
-            class="hero"
+          <article class="chart-card">
+
+            <div class="chart-header">
+              <div>
+                <p class="chart-code">C1</p>
+
+                <h3>Food inflation</h3>
+
+                <p>
+                  Year-on-year change in Malaysia's
+                  official food CPI.
+                </p>
+              </div>
+
+              <span class="idiom-badge basic">
+                Basic
+              </span>
+            </div>
+
+            <div
+              id="c1_food_inflation"
+              class="vis-container"
+            ></div>
+
+            <p class="chart-note">
+              Event annotations &middot;
+              hover for month and percentage
+            </p>
+
+          </article>
+
+          <!-- C2 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+              <div>
+                <p class="chart-code">C2</p>
+
+                <h3>Food vs other prices</h3>
+
+                <p>
+                  Compare food inflation with
+                  other CPI divisions.
+                </p>
+              </div>
+
+              <span class="idiom-badge basic">
+                Basic
+              </span>
+            </div>
+
+            <div
+              id="c2_divisions"
+              class="vis-container"
+            ></div>
+
+          </article>
+
+          <!-- C3 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+              <div>
+                <p class="chart-code">C3</p>
+
+                <h3>State &times; month heatmap</h3>
+
+                <p>
+                  See when inflation was highest
+                  across states.
+                </p>
+              </div>
+
+              <span class="idiom-badge advanced">
+                Advanced
+              </span>
+            </div>
+
+            <div
+              id="c3_state_month_heatmap"
+              class="vis-container"
+            ></div>
+
+            <p class="chart-note">
+              Orange = higher inflation &middot;
+              blue = lower or negative inflation
+              &middot; hover for details
+            </p>
+
+          </article>
+
+          <!-- M1 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+              <div>
+                <p class="chart-code">M1</p>
+
+                <h3>Food inflation by state</h3>
+
+                <p>
+                  Compare official food inflation
+                  geographically.
+                </p>
+              </div>
+
+              <span class="idiom-badge advanced">
+                Map 1
+              </span>
+            </div>
+
+            <div
+              id="m1_state_choropleth"
+              class="vis-container"
+            ></div>
+
+            <p class="chart-note">
+              August 2026 &middot;
+              Johor recorded the highest state
+              food inflation, while Kelantan
+              was slightly negative &middot;
+              hover for details
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- SECTION 1 FINDING -->
+
+        <aside
+          class="section-insight"
+          aria-label="Big picture finding"
         >
 
-            <div class="hero-inner">
+          <div class="insight-heading">
+            <span class="insight-kicker">
+              THE FINDING
+            </span>
 
-                <div class="hero-main">
+            <h3>
+              One national figure, different
+              state experiences.
+            </h3>
+          </div>
 
-                    <div class="hero-icon">
-                        🛒
-                    </div>
+          <p>
+            National food inflation was 1.9%
+            in August 2026. A lower positive
+            rate means prices are rising more
+            slowly, not falling. Johor reached
+            3.51%, while Kelantan recorded
+            &minus;0.07%.
+          </p>
 
-                    <div class="hero-copy">
+        </aside>
 
-                        <p class="eyebrow">
-                            Grocery prices in Malaysia
-                        </p>
+      </div>
+    </section>
 
-                        <h1>
-                            Same Trolley,
-                            <span>
-                                Different Bill
-                            </span>
-                        </h1>
+    <!-- SECTION 2: PRODUCTS -->
 
-                        <p class="hero-lead">
-                            What Malaysians really pay for groceries:
-                            which prices rose, which fell, and how where
-                            you shop and where you live can change the answer.
-                        </p>
+    <section id="items" class="story-section">
+      <div class="section-inner">
 
-                        <p class="hero-method">
-                            Official CPI inflation is compared with observed
-                            PriceCatcher shop prices from August 2022–2026,
-                            alongside household income.
-                        </p>
+        <div class="section-heading">
 
-                    </div>
+          <div class="section-number">02</div>
+
+          <div>
+            <p class="section-eyebrow">
+              Products &amp; categories
+            </p>
+
+            <h2>
+              What changed, and when?
+            </h2>
+
+            <p class="section-subtitle">
+              Some groceries changed sharply.
+              Broader food categories followed
+              different inflation paths over time.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="section-callout">
+          <p class="callout-copy">
+            <strong>
+              Price change &ne; inflation.
+            </strong>
+
+            C4 uses observed PriceCatcher prices.
+            C5 uses official CPI inflation.
+            These measures answer different
+            questions and are not directly comparable.
+          </p>
+        </div>
+
+        <div class="section2-grid">
+
+          <!-- C4 -->
+
+          <article class="chart-card c4-card">
+
+            <div class="chart-header">
+
+              <div>
+                <p class="chart-code">C4</p>
+
+                <h3>
+                  Which groceries changed the most?
+                </h3>
+
+                <p>
+                  Compare observed price changes
+                  from August 2022 to August 2026.
+                </p>
+
+                <div class="c4-legend">
+
+                  <span class="legend-title">
+                    Observed price change:
+                  </span>
+
+                  <span class="legend-item">
+                    <span class="legend-dot increase"></span>
+                    Increase
+                  </span>
+
+                  <span class="legend-item">
+                    <span class="legend-dot decrease"></span>
+                    Decrease
+                  </span>
 
                 </div>
+              </div>
 
-                <div class="hero-kpis">
-
-                    <div class="kpi-card">
-
-                        <p class="stat-value">
-                            +50%
-                        </p>
-
-                        <p class="stat-label">
-                            Tomato observed price change
-                        </p>
-
-                        <p class="stat-detail">
-                            Aug 2022 → Aug 2026
-                        </p>
-
-                    </div>
-
-                    <div class="kpi-card">
-
-                        <p class="stat-value">
-                            20
-                        </p>
-
-                        <p class="stat-label">
-                            Grocery products
-                        </p>
-
-                        <p class="stat-detail">
-                            Fixed national panel
-                        </p>
-
-                    </div>
-
-                    <div class="kpi-card">
-
-                        <p class="stat-value">
-                            5 years
-                        </p>
-
-                        <p class="stat-label">
-                            PriceCatcher comparison
-                        </p>
-
-                        <p class="stat-detail">
-                            2022 → 2026
-                        </p>
-
-                    </div>
-
-                </div>
+              <span class="idiom-badge advanced">
+                Advanced
+              </span>
 
             </div>
 
-        </section>
+            <div
+              id="c4_item_year_heatmap"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                C4 will appear here.
+              </p>
+            </div>
 
-        <!-- =====================================================
-             SECTION 1 BIG PICTURE
-        ====================================================== -->
+            <p class="chart-note">
+              Click a product to see its five-year
+              trend &middot; hover for price details
+            </p>
 
-        <section
-            id="big-picture"
-            class="story-section section-light"
+          </article>
+
+          <!-- C5 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+
+              <div>
+                <p class="chart-code">C5</p>
+
+                <h3>
+                  Which food categories cooled
+                  most from their peak?
+                </h3>
+
+                <p>
+                  Compare each category's highest
+                  year-on-year inflation since January
+                  2022 with August 2026.
+                </p>
+
+                <div
+                  class="c4-legend"
+                  aria-label="C5 chart legend"
+                >
+
+                  <span class="legend-item">
+                    <span class="legend-dot increase"></span>
+                    Historical peak
+                  </span>
+
+                  <span class="legend-item">
+                    <span class="legend-dot decrease"></span>
+                    August 2026
+                  </span>
+
+                </div>
+              </div>
+
+              <span class="idiom-badge advanced">
+                Advanced
+              </span>
+
+            </div>
+
+            <div
+              id="c5_food_subclasses"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                C5 will appear here.
+              </p>
+            </div>
+
+            <p class="chart-note">
+              Distance between dots = decline in
+              inflation (percentage points) &middot;
+              hover for peak month and exact values
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- SECTION 2 FINDING -->
+
+        <aside
+          class="section-insight"
+          aria-label="Products finding"
         >
 
-            <div class="section-inner">
+          <div class="insight-heading">
+            <span class="insight-kicker">
+              THE FINDING
+            </span>
 
-                <div class="section-heading">
+            <h3>
+              The same period did not affect
+              every food equally.
+            </h3>
+          </div>
 
-                    <div class="section-number">
-                        01
-                    </div>
+          <p>
+            Observed tomato prices rose 50%
+            from August 2022 to August 2026.
+            Meanwhile, official egg inflation
+            cooled from a 17.1% peak to 5.9%.
+            That is a decline of
+            11.2 percentage points.
+          </p>
 
-                    <div>
+        </aside>
 
-                        <p class="section-eyebrow">
-                            Official CPI
-                        </p>
+      </div>
+    </section>
 
-                        <h2>
-                            The big picture: food inflation
-                        </h2>
+    <!-- SECTION 3: SHOPS -->
 
-                        <p class="section-subtitle">
-                            How fast have food prices risen, and is the
-                            experience the same across Malaysia?
-                        </p>
+    <section
+      id="shops"
+      class="story-section section-light"
+    >
+      <div class="section-inner">
 
-                    </div>
+        <div class="section-heading">
 
-                </div>
+          <div class="section-number">03</div>
 
-                <div class="section-callout">
+          <div>
+            <p class="section-eyebrow">
+              Basket &amp; shop type
+            </p>
 
-                    <strong>
-                        CPI = inflation.
-                    </strong>
+            <h2>
+              Where you shop matters
+            </h2>
 
-                    This section uses official Consumer Price Index data.
-                    PriceCatcher observations are treated separately later.
+            <p class="section-subtitle">
+              First, see what makes up the
+              fixed grocery panel. Then compare
+              how prices vary by shop and chain.
+            </p>
+          </div>
 
-                </div>
+        </div>
 
-                <div class="section1-grid">
+        <!-- C6 AND C7 -->
 
-                    <!-- C1 -->
+        <div class="section3-top-grid">
 
-                    <article class="chart-card">
+          <!-- C6 -->
 
-                        <div class="chart-header">
+          <article class="chart-card section3-waffle">
 
-                            <div>
+            <div class="chart-header">
 
-                                <p class="chart-code">
-                                    C1
-                                </p>
+              <div>
+                <p class="chart-code">C6</p>
 
-                                <h3>
-                                    Food inflation
-                                </h3>
+                <h3>
+                  What makes up our grocery panel?
+                </h3>
 
-                                <p>
-                                    Year-on-year change in Malaysia's
-                                    official food CPI.
-                                </p>
+                <p>
+                  A normalized RM100 view of
+                  the fixed product panel.
+                </p>
 
-                            </div>
+                <p class="c6-note">
+                  Illustrative normalized panel.
+                  Not an official Malaysian
+                  household expenditure basket.
+                </p>
+              </div>
 
-                            <span class="idiom-badge basic">
-                                Basic
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="c1_food_inflation"
-                            class="vis-container"
-                        ></div>
-
-                        <p class="chart-note">
-                            Event annotations · hover = month + %
-                        </p>
-
-                    </article>
-
-                    <!-- C2 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    C2
-                                </p>
-
-                                <h3>
-                                    Food vs other prices
-                                </h3>
-
-                                <p>
-                                    Compare food inflation with other
-                                    CPI divisions.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge basic">
-                                Basic
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="c2_divisions"
-                            class="vis-container"
-                        ></div>
-
-                    </article>
-
-                    <!-- C3 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    C3
-                                </p>
-
-                                <h3>
-                                    State × month heatmap
-                                </h3>
-
-                                <p>
-                                    See when inflation was highest
-                                    across states.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge advanced">
-                                Advanced
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="c3_state_month_heatmap"
-                            class="vis-container"
-                        ></div>
-
-                        <p class="chart-note">
-                            Orange = higher inflation · blue = lower or
-                            negative inflation · hover for details
-                        </p>
-
-                    </article>
-
-                    <!-- M1 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    M1
-                                </p>
-
-                                <h3>
-                                    Food inflation by state
-                                </h3>
-
-                                <p>
-                                    Compare official food inflation
-                                    geographically.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge advanced">
-                                Map 1
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="m1_state_choropleth"
-                            class="vis-container"
-                        ></div>
-
-                        <p class="chart-note">
-                            Aug 2026 · Johor recorded the highest state food inflation,
-                            while Kelantan was slightly negative · hover for details
-                        </p>
-
-                    </article>
-
-                </div>
+              <span class="idiom-badge advanced">
+                Advanced
+              </span>
 
             </div>
 
-        </section>
+            <div class="c6-main">
 
-        <!-- =====================================================
-             SECTION 2 ITEMS
-        ====================================================== -->
+              <div
+                id="c6_waffle"
+                class="vis-container"
+              >
+                <p class="chart-placeholder">
+                  C6 will appear here.
+                </p>
+              </div>
 
-        <section
-            id="items"
-            class="story-section"
+              <aside class="c6-key-point">
+
+                <p class="c6-key-label">
+                  KEY TAKEAWAY
+                </p>
+
+                <p class="c6-key-number">
+                  69%
+                </p>
+
+                <h4>
+                  Protein + staples dominate the panel
+                </h4>
+
+                <p>
+                  Together they account for over
+                  two-thirds of the normalized
+                  grocery panel.
+                </p>
+
+              </aside>
+
+            </div>
+
+            <div class="c6-compact-key">
+
+              <span class="c6-colour-item">
+                <span class="c6-colour-swatch protein"></span>
+                Protein &middot; 36.6%
+              </span>
+
+              <span class="c6-colour-item">
+                <span class="c6-colour-swatch staples"></span>
+                Staples &middot; 32.4%
+              </span>
+
+              <span class="c6-colour-item">
+                <span class="c6-colour-swatch produce"></span>
+                Fresh produce &middot; 18.7%
+              </span>
+
+              <span class="c6-colour-item">
+                <span class="c6-colour-swatch packaged"></span>
+                Packaged &middot; 12.3%
+              </span>
+
+            </div>
+
+            <p class="chart-note">
+              100 squares = RM100 after normalising
+              the fixed grocery panel.
+            </p>
+
+          </article>
+
+          <!-- C7 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+
+              <div>
+                <p class="chart-code">C7</p>
+
+                <h3>
+                  Price distribution by shop type
+                </h3>
+
+                <p>
+                  Compare the spread of observed
+                  prices across premise types.
+                </p>
+              </div>
+
+              <span class="idiom-badge advanced">
+                Advanced
+              </span>
+
+            </div>
+
+            <div class="chart-control">
+
+              <label for="shop-item-select">
+                Select grocery item
+              </label>
+
+              <select id="shop-item-select">
+                <option value="1110">Eggs, Grade B</option>
+                <option value="1">Chicken</option>
+                <option value="263">Cooking oil</option>
+                <option value="114">Tomato</option>
+              </select>
+
+            </div>
+
+            <div
+              id="c7_box_shop_type"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                Box plot will appear here.
+              </p>
+            </div>
+
+            <p class="chart-note boxplot-note">
+              Box = middle 50% &middot;
+              centre line = median &middot;
+              whiskers = 5th to 95th percentile
+            </p>
+
+          </article>
+
+        </div>
+
+        <!-- C8 -->
+
+        <article class="chart-card c8-card">
+
+          <div class="chart-header">
+
+            <div>
+              <p class="chart-code">C8</p>
+
+              <h3>
+                Which chains are cheaper most often?
+              </h3>
+
+              <p>
+                Compare how often each supermarket
+                chain is priced below the national
+                median across the common grocery panel.
+              </p>
+            </div>
+
+            <span class="idiom-badge advanced">
+              Advanced
+            </span>
+
+          </div>
+
+          <div class="c8-content">
+
+            <div
+              id="c8_chain_item"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                Chain comparison will appear here.
+              </p>
+            </div>
+
+            <aside class="c8-insight-card">
+
+              <div class="c8-insight-section">
+
+                <p class="c8-side-label">
+                  HOW TO READ
+                </p>
+
+                <h4>
+                  Higher means cheaper more often
+                </h4>
+
+                <p>
+                  Each dot shows the share of common
+                  grocery items where the chain's
+                  median observed price is below
+                  the national median.
+                </p>
+
+              </div>
+
+              <div class="c8-insight-section">
+
+                <p class="c8-side-label">
+                  <strong>
+                    Mydin and Econsave tie at 89%
+                  </strong>
+                </p>
+
+                <p>
+                  Both chains were below the national
+                  median for 89% of compared items.
+                  That is a share of items,
+                  not an 89% price discount.
+                </p>
+
+              </div>
+
+              <div class="c8-insight-section">
+
+                <p class="c8-side-label">
+                  METHOD
+                </p>
+
+                <p>
+                  August 2026 &middot;
+                  common item set only &middot;
+                  each chain-item requires observations
+                  from at least three shops.
+                </p>
+
+              </div>
+
+            </aside>
+
+          </div>
+
+          <p class="chart-note">
+            100% means the chain was cheaper
+            than the national median for
+            every compared grocery item.
+          </p>
+
+        </article>
+
+        <!-- SECTION 3 FINDING -->
+
+        <aside
+          class="section-insight"
+          aria-label="Shopping finding"
         >
 
-            <div class="section-inner">
+          <div class="insight-heading">
 
-                <div class="section-heading">
+            <span class="insight-kicker">
+              THE FINDING
+            </span>
 
-                    <div class="section-number">
-                        02
-                    </div>
+            <h3>
+              A top-ranked chain is not
+              cheapest for every item.
+            </h3>
 
-                    <div>
+          </div>
 
-                        <p class="section-eyebrow">
-                            Products & categories
-                        </p>
+          <p>
+            Even the leading chains were not
+            priced below the national median
+            for every product. The ranking
+            shows how often a chain was cheaper,
+            not how much shoppers would save.
+          </p>
 
-                        <h2>
-                            What changed — and when?
-                        </h2>
+        </aside>
 
-                        <p class="section-subtitle">
-                            Some groceries changed sharply. Broader food categories
-                            followed different inflation paths over time.
-                        </p>
+      </div>
+    </section>
 
-                    </div>
+    <!-- SECTION 4: GEOGRAPHY -->
 
-                </div>
+    <section id="geography" class="story-section">
+      <div class="section-inner">
 
-                <div class="section-callout">
+        <div class="section-heading">
 
-                    <strong>
-                        Price change ≠ inflation.
-                    </strong>
+          <div class="section-number">04</div>
 
-                    C4 uses observed PriceCatcher prices. C5 uses official CPI inflation.
-                    They answer different questions and should not be read as the same measure.
+          <div>
+            <p class="section-eyebrow">
+              Geography
+            </p>
 
-                </div>
+            <h2>
+              Where you live matters
+            </h2>
 
-                <div class="section2-grid">
+            <p class="section-subtitle">
+              Grocery prices vary geographically,
+              but household incomes also differ.
+              A similar bill can therefore feel
+              very different from one state
+              to another.
+            </p>
+          </div>
 
-                    <!-- C4 -->
+        </div>
 
-                    <article class="chart-card c4-card">
+        <div class="section4-grid">
 
-                        <div class="chart-header">
+          <!-- M2 -->
 
-                            <div>
+          <article class="chart-card">
 
-                                <p class="chart-code">
-                                    C4
-                                </p>
+            <div class="chart-header">
 
-                                <h3>
-                                    Which groceries changed the most?
-                                </h3>
+              <div>
+                <p class="chart-code">M2</p>
 
-                                <p>
-                                    Compare observed price changes from
-                                    August 2022 to August 2026.
-                                </p>
+                <h3>
+                  Grocery price index by district
+                </h3>
 
-                                <div class="c4-legend">
+                <p>
+                  Compare district grocery prices
+                  and PriceCatcher coverage
+                  across Malaysia.
+                </p>
+              </div>
 
-                                    <span class="legend-title">
-                                        Observed price change:
-                                    </span>
-
-                                    <span class="legend-item">
-                                        <span class="legend-dot increase"></span>
-                                        Increase
-                                    </span>
-
-                                    <span class="legend-item">
-                                        <span class="legend-dot decrease"></span>
-                                        Decrease
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                            <span class="idiom-badge advanced">
-                                Advanced
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="c4_item_year_heatmap"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                C4 will appear here.
-                            </p>
-
-                        </div>
-
-                        <p class="chart-note">
-                            Click a product to see its five-year trend · hover for price details
-                        </p>
-
-                    </article>
-
-                    <!-- C5 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    C5
-                                </p>
-
-                                <h3>
-                                    When did food inflation peak across categories?
-                                </h3>
-
-                                <p>
-                                    Compare monthly inflation patterns across six official CPI food categories.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge basic">
-                                Basic
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="c5_food_subclasses"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                C5 will appear here.
-                            </p>
-
-                        </div>
-
-                        <p class="chart-note">
-                            Orange dot = peak monthly inflation · hover for exact month and value
-                        </p>
-
-                    </article>
-
-                </div>
+              <span class="idiom-badge advanced">
+                Map 2
+              </span>
 
             </div>
 
-        </section>
+            <div
+              id="m2_district_price"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                District proportional-symbol map
+                will appear here.
+              </p>
+            </div>
 
-        <!-- =====================================================
-             SECTION 3 SHOPS
-        ====================================================== -->
+            <p class="chart-note">
+              August 2026 &middot;
+              100 = national median &middot;
+              colour = price index &middot;
+              circle size = active shops &middot;
+              hollow circles = insufficient coverage
+            </p>
 
-        <section
-            id="shops"
-            class="story-section section-light"
+          </article>
+
+          <!-- M3 -->
+
+          <article class="chart-card">
+
+            <div class="chart-header">
+
+              <div>
+                <p class="chart-code">M3</p>
+
+                <h3>
+                  Grocery affordability by state
+                </h3>
+
+                <p>
+                  Illustrative August 2026 grocery
+                  panel cost compared with 2024
+                  median monthly household income.
+                </p>
+              </div>
+
+              <span class="idiom-badge advanced">
+                Map 3
+              </span>
+
+            </div>
+
+            <div
+              id="m3_state_affordability"
+              class="vis-container"
+            >
+              <p class="chart-placeholder">
+                State affordability cartogram
+                will appear here.
+              </p>
+            </div>
+
+            <p class="chart-note">
+              Circle size = median household income
+              &middot; colour = grocery panel
+              as a share of income &middot;
+              hollow circle = insufficient
+              grocery-price coverage
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="section-callout">
+
+          <p class="callout-copy">
+            <strong>
+              Illustrative affordability,
+              not actual grocery spending.
+            </strong>
+
+            M3 compares August 2026 grocery panel
+            prices with 2024 median monthly household
+            income. This is not a record of what
+            households actually buy or spend.
+          </p>
+
+        </div>
+
+        <!-- SECTION 4 FINDING -->
+
+        <aside
+          class="section-insight"
+          aria-label="Geography finding"
         >
 
-            <div class="section-inner">
+          <div class="insight-heading">
 
-                <div class="section-heading">
+            <span class="insight-kicker">
+              THE FINDING
+            </span>
 
-                    <div class="section-number">
-                        03
-                    </div>
+            <h3>
+              Similar grocery costs,
+              unequal income burdens.
+            </h3>
 
-                    <div>
+          </div>
 
-                        <p class="section-eyebrow">
-                            Basket & shop type
-                        </p>
+          <p>
+            The panel equals 4.36% of median
+            monthly household income in Kelantan,
+            versus 1.65% in Selangor.
+            Differences in income matter alongside
+            differences in prices.
+          </p>
 
-                        <h2>
-                            Where you shop matters
-                        </h2>
+        </aside>
 
-                        <p class="section-subtitle">
-                            First, see what makes up the fixed grocery panel.
-                            Then compare how prices vary by shop and chain.
-                        </p>
+      </div>
+    </section>
 
-                    </div>
+    <!-- SECTION 5: TAKEAWAYS -->
 
-                </div>
+    <section
+      id="takeaways"
+      class="story-section takeaways-section"
+    >
+      <div class="section-inner">
 
-                <!-- =====================================================
-                     SECTION 3 TOP ROW — C6 + C7
-                ====================================================== -->
+        <div class="section-heading">
 
-                <div class="section3-top-grid">
+          <div class="section-number">05</div>
 
-                    <!-- C6 -->
+          <div>
+            <p class="section-eyebrow">
+              Takeaways
+            </p>
 
-                    <article class="chart-card section3-waffle">
+            <h2>
+              What this means for you
+            </h2>
 
-                        <div class="chart-header">
+            <p class="section-subtitle">
+              The same shopping trolley can
+              produce a very different bill
+              depending on the product,
+              shop and location.
+            </p>
+          </div>
 
-                            <div>
+        </div>
 
-                                <p class="chart-code">
-                                    C6
-                                </p>
+        <div class="takeaway-grid">
 
-                                <h3>
-                                    What makes up our grocery panel?
-                                </h3>
+          <article class="takeaway-card">
 
-                                <p>
-                                    A normalized RM100 view of the fixed product panel.
-                                </p>
+            <div class="takeaway-number">1</div>
 
-                                <p class="c6-note">
-                                    Illustrative normalized panel — not an official Malaysian household expenditure basket.
-                                </p>
+            <h3>
+              Tomato prices rose 50%
+            </h3>
 
-                            </div>
+            <p>
+              That is the observed change from
+              August 2022 to August 2026.
+              Other products increased less,
+              stayed stable, or became cheaper.
+            </p>
 
-                            <span class="idiom-badge advanced">
-                                Advanced
-                            </span>
+          </article>
 
-                        </div>
+          <article class="takeaway-card">
 
-                        <div class="c6-main">
+            <div class="takeaway-number">2</div>
 
-                            <div
-                                id="c6_waffle"
-                                class="vis-container"
-                            >
+            <h3>
+              Mydin and Econsave lead at 89%
+            </h3>
 
-                                <p class="chart-placeholder">
-                                    C6 will appear here.
-                                </p>
+            <p>
+              For the common products compared,
+              both chains priced 89% of items
+              below the national median.
+              Availability and individual branches
+              may differ.
+            </p>
 
-                            </div>
+          </article>
 
-                            <aside class="c6-key-point">
+          <article class="takeaway-card">
 
-                                <p class="c6-key-label">
-                                    KEY TAKEAWAY
-                                </p>
+            <div class="takeaway-number">3</div>
 
-                                <p class="c6-key-number">
-                                    69%
-                                </p>
+            <h3>
+              Kelantan faces a higher
+              relative burden
+            </h3>
 
-                                <h4>
-                                    Protein + staples dominate the panel
-                                </h4>
+            <p>
+              The illustrative panel equals 4.36%
+              of median household income there,
+              compared with 1.65% in Selangor.
+              This is not actual household spending.
+            </p>
 
-                                <p>
-                                    Together they account for over two-thirds
-                                    of the normalized grocery panel.
-                                </p>
+          </article>
 
-                            </aside>
+        </div>
 
-                        </div>
+      </div>
+    </section>
 
-                        <div class="c6-compact-key">
+    <!-- FOOTER -->
 
-                            <span class="c6-colour-item">
-                                <span class="c6-colour-swatch protein"></span>
-                                Protein · 36.6%
-                            </span>
+    <footer class="site-footer">
+      <div class="footer-inner">
 
-                            <span class="c6-colour-item">
-                                <span class="c6-colour-swatch staples"></span>
-                                Staples · 32.4%
-                            </span>
+        <div class="footer-block">
 
-                            <span class="c6-colour-item">
-                                <span class="c6-colour-swatch produce"></span>
-                                Fresh produce · 18.7%
-                            </span>
+          <h3>Sources</h3>
 
-                            <span class="c6-colour-item">
-                                <span class="c6-colour-swatch packaged"></span>
-                                Packaged · 12.3%
-                            </span>
+          <p>
+            <a
+              href="https://open.dosm.gov.my/dashboard/consumer-prices"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DOSM: Consumer Price Index (CPI)
+            </a>
+          </p>
 
-                        </div>
+          <p>
+            <a
+              href="https://open.dosm.gov.my/data-catalogue/pricecatcher"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              KPDN: PriceCatcher observations
+            </a>
+          </p>
 
-                        <p class="chart-note">
-                            100 squares = RM100 after normalising the fixed grocery panel.
-                        </p>
+          <p>
+            <a
+              href="https://open.dosm.gov.my/data-catalogue/hies_state"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DOSM: Household income by state
+            </a>
+          </p>
 
-                    </article>
+        </div>
 
-                    <!-- C7 -->
+        <div class="footer-block">
 
-                    <article class="chart-card">
+          <h3>Method</h3>
 
-                        <div class="chart-header">
+          <p>
+            PriceCatcher comparisons use observed
+            monthly median prices, not representative
+            CPI inflation.
+          </p>
 
-                            <div>
+          <p>
+            Product trends use matched shops for
+            the August snapshots from 2022 to 2026.
+          </p>
 
-                                <p class="chart-code">
-                                    C7
-                                </p>
+          <p>
+            Affordability compares August 2026
+            panel prices with 2024 median
+            household income.
+          </p>
 
-                                <h3>
-                                    Price distribution by shop type
-                                </h3>
+        </div>
 
-                                <p>
-                                    Compare the spread of observed prices across premise types.
-                                </p>
+        <div class="footer-block">
 
-                            </div>
+          <h3>About</h3>
 
-                            <span class="idiom-badge advanced">
-                                Advanced
-                            </span>
+          <p>Hassan Omer Mahmood</p>
 
-                        </div>
+          <p>
+            FIT3179 Data Visualisation 2
+          </p>
 
-                        <div class="chart-control">
+          <p>October 2026</p>
 
-                            <label for="shop-item-select">
-                                Select grocery item
-                            </label>
+        </div>
 
-                            <select id="shop-item-select">
+        <div class="footer-block">
 
-                                <option value="1110">
-                                    Eggs, Grade B
-                                </option>
+          <h3>Acknowledgement</h3>
 
-                                <option value="1">
-                                    Chicken
-                                </option>
+          <p>
+            Generative AI tools were used
+            during ideation, coding assistance
+            and design development.
+          </p>
 
-                                <option value="263">
-                                    Cooking oil
-                                </option>
+        </div>
 
-                                <option value="114">
-                                    Tomato
-                                </option>
+      </div>
+    </footer>
 
-                            </select>
+  </main>
 
-                        </div>
-
-                        <div
-                            id="c7_box_shop_type"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                Box plot will appear here.
-                            </p>
-
-                        </div>
-
-                        <p class="chart-note boxplot-note">
-                            Box = middle 50% · centre line = median · whiskers = 5th–95th percentile.
-                        </p>
-
-                    </article>
-
-                </div>
-
-                <!-- =====================================================
-                     SECTION 3 BOTTOM ROW — C8
-                ====================================================== -->
-
-                <article class="chart-card c8-card">
-
-                    <div class="chart-header">
-
-                        <div>
-
-                            <p class="chart-code">
-                                C8
-                            </p>
-
-                            <h3>
-                                Which chains are cheaper most often?
-                            </h3>
-
-                            <p>
-                                Compare how often each supermarket chain is priced below
-                                the national median across the common grocery panel.
-                            </p>
-
-                        </div>
-
-                        <span class="idiom-badge basic">
-                            Basic
-                        </span>
-
-                    </div>
-
-                    <div class="c8-content">
-
-                        <div
-                            id="c8_chain_item"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                Chain comparison will appear here.
-                            </p>
-
-                        </div>
-
-                        <aside class="c8-insight-card">
-
-                            <div class="c8-insight-section">
-
-                                <p class="c8-side-label">
-                                    HOW TO READ
-                                </p>
-
-                                <h4>
-                                    Higher means cheaper more often
-                                </h4>
-
-                                <p>
-                                    Each dot shows the share of common grocery items
-                                    where the chain's median observed price is below
-                                    the national median.
-                                </p>
-
-                            </div>
-
-                            <div class="c8-insight-section">
-
-                                <p class="c8-side-label">
-                                    <strong>Mydin and Econsave tie at 89%</strong>
-                                </p>
-
-                                <p>
-                                    <strong>Mydin and Econsave</strong> tie for the highest
-                                    share, with prices below the national median for
-                                    89% of the compared grocery items.
-                                </p>
-
-                            </div>
-
-                            <div class="c8-insight-section">
-
-                                <p class="c8-side-label">
-                                    METHOD
-                                </p>
-
-                                <p>
-                                    August 2026 · common item set only · each chain-item
-                                    requires observations from at least three shops.
-                                </p>
-
-                            </div>
-
-                        </aside>
-
-                    </div>
-
-                    <p class="chart-note">
-                        100% means the chain was cheaper than the national median for every compared grocery item.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             SECTION 4 GEOGRAPHY
-        ====================================================== -->
-
-        <section
-            id="geography"
-            class="story-section"
-        >
-
-            <div class="section-inner">
-
-                <div class="section-heading">
-
-                    <div class="section-number">
-                        04
-                    </div>
-
-                    <div>
-
-                        <p class="section-eyebrow">
-                            Geography
-                        </p>
-
-                        <h2>
-                            Where you live matters
-                        </h2>
-
-                        <p class="section-subtitle">
-                            Grocery prices vary geographically, but household
-                            incomes also differ. A similar bill can therefore
-                            feel very different from one state to another.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="section4-grid">
-
-                    <!-- M2 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    M2
-                                </p>
-
-                                <h3>
-                                    Grocery price index by district
-                                </h3>
-
-                                <p>
-                                    Compare district grocery prices and
-                                    PriceCatcher coverage across Malaysia.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge advanced">
-                                Map 2
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="m2_district_price"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                District proportional-symbol map will appear here.
-                            </p>
-
-                        </div>
-
-                        <p class="chart-note">
-                            August 2026 · 100 = national median · colour = price index ·
-                            circle size = active shops · hollow circles = insufficient coverage.
-                        </p>
-
-                    </article>
-
-                    <!-- M3 -->
-
-                    <article class="chart-card">
-
-                        <div class="chart-header">
-
-                            <div>
-
-                                <p class="chart-code">
-                                    M3
-                                </p>
-
-                                <h3>
-                                    Grocery affordability by state
-                                </h3>
-
-                                <p>
-                                    Illustrative grocery panel cost relative
-                                    to median monthly household income.
-                                </p>
-
-                            </div>
-
-                            <span class="idiom-badge advanced">
-                                Map 3
-                            </span>
-
-                        </div>
-
-                        <div
-                            id="m3_state_affordability"
-                            class="vis-container"
-                        >
-
-                            <p class="chart-placeholder">
-                                State affordability cartogram will appear here.
-                            </p>
-
-                        </div>
-
-                        <p class="chart-note">
-                            Circle size = median household income · colour = grocery panel as a share
-                            of income · hollow circle = insufficient grocery-price coverage.
-                        </p>
-
-                    </article>
-
-                </div>
-
-                <div class="section-callout">
-
-                    <strong>
-                        Affordability ≠ household grocery spending.
-                    </strong>
-
-                    The percentage compares the price of one unit of each
-                    product in the consistent grocery panel with median
-                    monthly household income.
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             SECTION 5 TAKEAWAYS
-        ====================================================== -->
-
-        <section
-            id="takeaways"
-            class="story-section takeaways-section"
-        >
-
-            <div class="section-inner">
-
-                <div class="section-heading">
-
-                    <div class="section-number">
-                        05
-                    </div>
-
-                    <div>
-
-                        <p class="section-eyebrow">
-                            Takeaways
-                        </p>
-
-                        <h2>
-                            What this means for you
-                        </h2>
-
-                        <p class="section-subtitle">
-                            The same shopping trolley can produce a very
-                            different bill depending on the product,
-                            shop and location.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="takeaway-grid">
-
-                    <article class="takeaway-card">
-
-                        <div class="takeaway-number">
-                            1
-                        </div>
-
-                        <h3>
-                            Not everything rose equally
-                        </h3>
-
-                        <p>
-                            Some grocery products became considerably more
-                            expensive between 2022 and 2026, while others
-                            were stable or cheaper.
-                        </p>
-
-                    </article>
-
-                    <article class="takeaway-card">
-
-                        <div class="takeaway-number">
-                            2
-                        </div>
-
-                        <h3>
-                            Shop choice matters
-                        </h3>
-
-                        <p>
-                            The same product can have noticeably different
-                            observed prices across premise types and
-                            supermarket chains.
-                        </p>
-
-                    </article>
-
-                    <article class="takeaway-card">
-
-                        <div class="takeaway-number">
-                            3
-                        </div>
-
-                        <h3>
-                            The same bill can feel different
-                        </h3>
-
-                        <p>
-                            Household incomes vary strongly between states,
-                            changing how significant the same grocery panel
-                            cost may be.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =====================================================
-             FOOTER
-        ====================================================== -->
-
-        <footer class="site-footer">
-
-            <div class="footer-inner">
-
-                <div class="footer-block">
-
-                    <h3>
-                        Sources
-                    </h3>
-
-                    <p>
-                        Department of Statistics Malaysia (DOSM)
-                    </p>
-
-                    <p>
-                        KPDN PriceCatcher
-                    </p>
-
-                    <p>
-                        Household Income & Expenditure Statistics
-                    </p>
-
-                </div>
-
-                <div class="footer-block">
-
-                    <h3>
-                        Method
-                    </h3>
-
-                    <p>
-                        PriceCatcher comparisons use monthly median
-                        observed prices.
-                    </p>
-
-                    <p>
-                        National product trends use matched shops across
-                        August 2022–2026.
-                    </p>
-
-                </div>
-
-                <div class="footer-block">
-
-                    <h3>
-                        About
-                    </h3>
-
-                    <p>
-                        Hassan Omer Mahmood
-                    </p>
-
-                    <p>
-                        FIT3179 Data Visualisation 2
-                    </p>
-
-                    <p>
-                        October 2026
-                    </p>
-
-                </div>
-
-                <div class="footer-block">
-
-                    <h3>
-                        Acknowledgement
-                    </h3>
-
-                    <p>
-                        Generative AI tools were used during ideation,
-                        coding assistance and design development.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </footer>
-
-    </main>
-
-    <script src="js/vega_lite_vis.js"></script>
+  <script src="js/vega_lite_vis.js"></script>
 
 </body>
-
 </html>

@@ -1,12 +1,23 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-  "description": "Year-on-year inflation across six Malaysian CPI food subclasses, shown as small-multiple monthly time series.",
-
+  "description": "Connected dot plot comparing historical peak food inflation with August 2026 inflation across six Malaysian CPI food categories.",
+  "width": "container",
+  "height": 470,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding",
+    "resize": true
+  },
+  "padding": {
+    "left": 8,
+    "right": 65,
+    "top": 20,
+    "bottom": 10
+  },
   "data": {
     "url": "data/c5_cpi_food_subclasses.csv"
   },
-
   "transform": [
     {
       "calculate": "toDate(datum.date + '-01')",
@@ -27,274 +38,244 @@
           "order": "ascending"
         }
       ],
-      "groupby": [
-        "group"
-      ]
+      "groupby": ["group"]
     },
     {
       "calculate": "datum.index_prev_year == null ? null : ((datum.index / datum.index_prev_year) - 1) * 100",
       "as": "yoy"
     },
     {
-      "filter": "datum.yoy != null"
+      "filter": "isValid(datum.yoy)"
     },
     {
-      "filter": "year(datum.date_parsed) >= 2022"
+      "filter": "datum.date >= '2022-01' && datum.date <= '2026-08'"
+    },
+    {
+      "calculate": "datum.date === '2026-08' ? datum.yoy : null",
+      "as": "latest_candidate"
     },
     {
       "joinaggregate": [
         {
           "op": "max",
-          "field": "yoy",
-          "as": "peak_yoy"
+          "field": "latest_candidate",
+          "as": "latest_yoy"
         }
       ],
-      "groupby": [
-        "group"
-      ]
+      "groupby": ["group"]
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "peak_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "yoy",
+          "order": "descending"
+        },
+        {
+          "field": "date_parsed",
+          "order": "ascending"
+        }
+      ],
+      "groupby": ["group"]
+    },
+    {
+      "filter": "datum.peak_rank === 1"
+    },
+    {
+      "calculate": "datum.yoy",
+      "as": "peak_yoy"
+    },
+    {
+      "calculate": "timeFormat(datum.date_parsed, '%b %Y')",
+      "as": "peak_month"
+    },
+    {
+      "calculate": "datum.peak_yoy - datum.latest_yoy",
+      "as": "cooling_pp"
+    },
+    {
+      "calculate": "format(datum.peak_yoy, '.1f') + '%'",
+      "as": "peak_label"
+    },
+    {
+      "calculate": "format(datum.latest_yoy, '.1f') + '%'",
+      "as": "latest_label"
+    },
+    {
+      "calculate": "datum.group === 'Meat (incl. chicken)' ? 'Meat & chicken' : datum.group",
+      "as": "category"
     }
   ],
-
-  "facet": {
-    "field": "group",
-    "type": "nominal",
-
-    "sort": [
-      "Rice & cereals",
-      "Meat (incl. chicken)",
-      "Fresh fish",
-      "Eggs",
-      "Vegetable oils",
-      "Leafy vegetables"
-    ],
-
-    "header": {
-      "title": null,
-      "labelColor": "#183153",
-      "labelFontSize": 11,
-      "labelFontWeight": 700,
-      "labelPadding": 8,
-      "labelLimit": 180
-    }
-  },
-
-  "columns": 2,
-
-  "spec": {
-    "width": 185,
-    "height": 150,
-
-    "layer": [
-      {
-        "mark": {
-          "type": "rule",
-          "stroke": "#b8bec6",
-          "strokeWidth": 1,
-          "strokeDash": [3, 3]
-        },
-
-        "encoding": {
-          "y": {
-            "datum": 0
-          }
-        }
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "sort": [
+        "Eggs",
+        "Meat & chicken",
+        "Rice & cereals",
+        "Vegetable oils",
+        "Fresh fish",
+        "Leafy vegetables"
+      ],
+      "axis": {
+        "title": null,
+        "labelColor": "#183153",
+        "labelFontSize": 11,
+        "labelFontWeight": 600,
+        "labelLimit": 140,
+        "labelPadding": 12,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "x": {
+      "field": "peak_yoy",
+      "type": "quantitative",
+      "scale": {
+        "domain": [-3, 20],
+        "nice": false
       },
-
+      "axis": {
+        "title": "Year-on-year inflation (%)",
+        "titleFontSize": 11,
+        "titleFontWeight": 600,
+        "titleColor": "#435166",
+        "titlePadding": 14,
+        "values": [0, 5, 10, 15, 20],
+        "labelFontSize": 10,
+        "labelColor": "#68717d",
+        "labelExpr": "datum.value + '%'",
+        "grid": true,
+        "gridColor": "#e7e5e0",
+        "gridOpacity": 0.85,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "tooltip": [
       {
-        "mark": {
-          "type": "line",
-          "stroke": "#596b7f",
-          "strokeWidth": 2.1,
-          "interpolate": "linear"
-        },
-
-        "encoding": {
-          "x": {
-            "field": "date_parsed",
-            "type": "temporal",
-
-            "axis": {
-              "title": null,
-              "format": "%Y",
-              "labelFontSize": 8,
-              "labelColor": "#68717d",
-              "labelAngle": 0,
-              "tickCount": "year",
-              "grid": false,
-              "domainColor": "#aeb7c0",
-              "tickColor": "#aeb7c0"
-            }
-          },
-
-          "y": {
-            "field": "yoy",
-            "type": "quantitative",
-
-            "scale": {
-              "zero": false
-            },
-
-            "axis": {
-              "title": null,
-              "labelFontSize": 8,
-              "labelColor": "#68717d",
-              "format": ".0f",
-              "grid": true,
-              "gridColor": "#e8e5df",
-              "gridOpacity": 0.75,
-              "domain": false,
-              "ticks": false
-            }
-          },
-
-          "tooltip": [
-            {
-              "field": "group",
-              "type": "nominal",
-              "title": "Food category"
-            },
-            {
-              "field": "date_parsed",
-              "type": "temporal",
-              "title": "Month",
-              "format": "%b %Y"
-            },
-            {
-              "field": "yoy",
-              "type": "quantitative",
-              "title": "Inflation (%)",
-              "format": ".1f"
-            },
-            {
-              "field": "index",
-              "type": "quantitative",
-              "title": "CPI index",
-              "format": ".1f"
-            }
-          ]
-        }
+        "field": "group",
+        "type": "nominal",
+        "title": "Food category"
       },
-
       {
-        "mark": {
-          "type": "point",
-          "filled": true,
-          "size": 70,
-          "fill": "#ffffff",
-          "stroke": "#596b7f",
-          "strokeWidth": 1.5,
-          "opacity": 0.001
-        },
-
-        "encoding": {
-          "x": {
-            "field": "date_parsed",
-            "type": "temporal"
-          },
-
-          "y": {
-            "field": "yoy",
-            "type": "quantitative"
-          },
-
-          "tooltip": [
-            {
-              "field": "group",
-              "type": "nominal",
-              "title": "Food category"
-            },
-            {
-              "field": "date_parsed",
-              "type": "temporal",
-              "title": "Month",
-              "format": "%b %Y"
-            },
-            {
-              "field": "yoy",
-              "type": "quantitative",
-              "title": "Inflation (%)",
-              "format": ".1f"
-            }
-          ]
-        }
+        "field": "peak_month",
+        "type": "nominal",
+        "title": "Peak month"
       },
-
       {
-        "transform": [
-          {
-            "filter": "datum.yoy == datum.peak_yoy"
-          }
-        ],
-
-        "mark": {
-          "type": "point",
-          "filled": true,
-          "size": 75,
-          "fill": "#d97732",
-          "stroke": "#ffffff",
-          "strokeWidth": 1.5
-        },
-
-        "encoding": {
-          "x": {
-            "field": "date_parsed",
-            "type": "temporal"
-          },
-
-          "y": {
-            "field": "yoy",
-            "type": "quantitative"
-          },
-
-          "tooltip": [
-            {
-              "field": "group",
-              "type": "nominal",
-              "title": "Food category"
-            },
-            {
-              "field": "date_parsed",
-              "type": "temporal",
-              "title": "Peak month",
-              "format": "%b %Y"
-            },
-            {
-              "field": "yoy",
-              "type": "quantitative",
-              "title": "Peak inflation (%)",
-              "format": ".1f"
-            }
-          ]
-        }
+        "field": "peak_yoy",
+        "type": "quantitative",
+        "title": "Peak inflation (%)",
+        "format": ".2f"
+      },
+      {
+        "field": "latest_yoy",
+        "type": "quantitative",
+        "title": "Aug 2026 inflation (%)",
+        "format": ".2f"
+      },
+      {
+        "field": "cooling_pp",
+        "type": "quantitative",
+        "title": "Decline (percentage points)",
+        "format": ".2f"
       }
     ]
   },
-
-  "resolve": {
-    "scale": {
-      "x": "shared",
-      "y": "shared"
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#a6b1be",
+        "strokeWidth": 3,
+        "strokeCap": "round"
+      },
+      "encoding": {
+        "x2": {
+          "field": "latest_yoy"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 155,
+        "color": "#d97732",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 155,
+        "color": "#315b89",
+        "stroke": "#ffffff",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "latest_yoy",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 9,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#b85e21"
+      },
+      "encoding": {
+        "text": {
+          "field": "peak_label",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -9,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#315b89"
+      },
+      "encoding": {
+        "x": {
+          "field": "latest_yoy",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "latest_label",
+          "type": "nominal"
+        }
+      }
     }
-  },
-
+  ],
   "config": {
     "background": null,
-
     "view": {
       "stroke": null
     },
-
-    "facet": {
-      "spacing": 20
-    },
-
     "axis": {
       "labelFont": "Arial",
       "titleFont": "Arial"
-    },
-
-    "header": {
-      "labelFont": "Arial"
     }
   }
 }
